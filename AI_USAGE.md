@@ -55,6 +55,8 @@ Hãy đề xuất:
 Trước tiên, hãy giải thích phương án thiết kế.
 Chưa tạo toàn bộ mã nguồn cho đến khi tôi yêu cầu."
 
+Em cũng đề xuất chỉnh sửa giao diện bằng lệnh : "tôi thấy cái phần giảm giá bao nhiêu % đang còn nhỏ, hơi khó để ý. bạn sửa lại cho tôi được không."
+
 ## 4. Kết quả AI đề xuất
 
 AI đề xuất thiết kế khu vực sản phẩm giảm giá theo hình thức một kệ hàng khuyến mãi, gồm tiêu đề, đồng hồ đếm ngược và danh sách sản phẩm. Trên mỗi thẻ sản phẩm có hình ảnh, tên sách, giá bán, giá gốc, tỷ lệ giảm giá, điểm đánh giá và số lượng đã bán.
@@ -70,7 +72,7 @@ Sau khi đối chiếu nhận xét của AI với website FAHASA thực tế, em
 - Giỏ hàng: Website chưa hiển thị rõ số lượng sản phẩm trong giỏ khi khách hàng đang ở trang khác. Em đề xuất hiển thị số lượng ngay trên biểu tượng giỏ hàng hoặc bổ sung phần xem nhanh giỏ hàng. Ngoài ra, website chỉ cho phép sử dụng một gift card trên mỗi đơn hàng và chưa thể hiện rõ tổng số tiền tiết kiệm được từ các ưu đãi.
 - Thông tin ưu đãi: Website đã có gợi ý mua thêm để nhận quà và có chức năng gói quà ở bước thanh toán. Vì vậy, em không xem đây là những chức năng cần bổ sung mới.
 
-Đối với giao diện minh họa, em thay đổi hình ảnh sản phẩm và chỉnh sửa đường dẫn ảnh trong file HTML để hiển thị đúng hình ảnh đã chọn.
+Đối với giao diện minh họa, em thay đổi hình ảnh sản phẩm và chỉnh sửa đường dẫn ảnh trong file HTML để hiển thị đúng hình ảnh đã chọn, cũng như em có chỉnh sửa phần Phần trăm giảm giá hiển thị cho rõ ràng để dễ thu hút hơn. 
 
 ## 6. Phần em hiểu và có thể giải thích
 
