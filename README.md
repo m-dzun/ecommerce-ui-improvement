@@ -34,5 +34,4 @@ Trong quá trình hoàn thiện, em thay đổi hình ảnh sản phẩm và ch�
 
 ## 7. Hỗ trợ từ AI
 
-AI hỗ trợ phân tích giao diện website tham khảo bao gồm các phần như trang chủ, danh mục cũng như chi tiết sản phẩm, phần tìm kiếm và giỏ hàng, sau đó em hỏi AI có đề xuất cải tiến bố cục chỗ nào không, khi thấy hợp lý thì em bảo nó hãy thực hiện sửa đổi sau đó là giải thích HTML/CSS, tạo mã nguồn HTML, CSS ban đầu. Sau đó, em đối chiếu các nhận xét với website thực tế, điều chỉnh những thông tin chưa chính xác và thay đổi hình ảnh sản phẩm trong mã nguồn.
-
+AI hỗ trợ phân tích giao diện website tham khảo bao gồm các phần như trang chủ, danh mục cũng như chi tiết sản phẩm, phần tìm kiếm và giỏ hàng, sau đó em hỏi AI có đề xuất cải tiến bố cục chỗ nào không, khi thấy hợp lý thì em bảo nó hãy thực hiện sửa đổi sau đó là giải thích HTML/CSS, tạo mã nguồn HTML, CSS ban đầu. Sau đó, em đối chiếu các nhận xét với website thực tế, điều chỉnh những thông tin chưa chính xác, cũng như yêu cầu chỉnh sửa lại phần phần trăm giảm giá để rõ hơn và thay đổi hình ảnh sản phẩm trong mã nguồn.
