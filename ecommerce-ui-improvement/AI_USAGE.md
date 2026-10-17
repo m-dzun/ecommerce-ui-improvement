@@ -74,8 +74,8 @@ Sau khi đối chiếu nhận xét của AI với website FAHASA thực tế, em
 
 ## 6. Phần em hiểu và có thể giải thích
 
-- HTML - thẻ <img> : Dùng để hiển thị hình ảnh sản phẩm. Em đã chỉnh sửa đường dẫn trong thuộc tính 'src' để thay đổi ảnh bìa sách.
-- HTML - thẻ <h1>, <h2> và <p>:** Dùng để hiển thị tiêu đề và nội dung văn bản trên trang.
+- HTML - thẻ `<img>` : Dùng để hiển thị hình ảnh sản phẩm. Em đã chỉnh sửa đường dẫn trong thuộc tính `src` để thay đổi ảnh bìa sách.
+- HTML - thẻ `<h1>`, `<h2>` và `<p>`: Dùng để hiển thị tiêu đề và nội dung văn bản trên trang.
 - CSS - thuộc tính 'color' và 'background-color': Dùng để thay đổi màu chữ và màu nền, giúp giá khuyến mãi và nhãn giảm giá nổi bật hơn.
 - CSS - thuộc tính 'font-size' và 'margin': Dùng để điều chỉnh kích thước chữ và khoảng cách giữa các thành phần.
 - CSS - '@media' : Cho phép thay đổi cách hiển thị khi kích thước màn hình thay đổi, hỗ trợ giao diện trên điện thoại.
