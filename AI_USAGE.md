@@ -6,80 +6,33 @@ Tên công cụ: Claude
 
 ## 2. Mục đích sử dụng
 
-Em sử dụng AI để hỗ trợ phân tích giao diện website FAHASA, nhận xét ưu điểm và hạn chế của các chức năng, đề xuất hướng cải tiến bố cục, giải thích các thành phần HTML/CSS và tạo mã nguồn HTML, CSS cho giao diện minh họa.
-
+Em sử dụng AI để phân tích các phần còn thiếu trong file HTML cũng như CSS của mình, sau đó nhờ AI gợi ý cách chỉnh sửa để bài được hoàn chỉnh nhất. 
 ## 3. Prompt đã sử dụng
 
-Đầu tiên là câu lệnh để phân tích các thành phần của website em muốn:
-"Bạn là chuyên gia phân tích nghiệp vụ và thiết kế trải nghiệm người dùng
-cho website thương mại điện tử.
-
-Tôi đang khảo sát website: fahasha , link là https://www.fahasa.com/ 
-Hãy giúp tôi lập bảng phân tích các khu vực:
-1. Trang chủ.
-2. Danh mục sản phẩm.
-3. Chi tiết sản phẩm.
-4. Tìm kiếm.
-5. Giỏ hàng.
-
-Với mỗi khu vực, hãy nêu:
-- Mục đích của chức năng.
-- Thành phần giao diện cần có.
-- Điểm thuận tiện đối với khách hàng.
-- Một vấn đề có thể phát sinh.
-- Một đề xuất cải tiến.
-
-Không khẳng định những tính năng chưa được kiểm chứng.
-Phân biệt rõ nhận xét dựa trên quan sát và đề xuất của AI."
-
-Và câu lệnh nhận xét phần câu trả lời của AI:
-"chỗ tìm kiếm do bạn không truy cập được nên không thấy, bấm vào thanh tìm kiếm sẽ hiện từ khóa hot và danh mục nổi bật (để đề xuất cho người mua). và nó không có chức năng sửa lỗi chính tả đâu nha, nếu nhập tên tác phẩm thì nó sẽ hiện những tác phẩm có tên tương tự nữa, còn tìm tác giả thì sẽ ra những tác phẩm của tác giả đó, có cả gợi ý khi mới nhập 1 chữ đầu thôi nữa, khá tiện lợi. còn vấn đề thì đúng thật, lúc tìm kiếm sẽ không chia ra theo chủng loại, sau khi bấm nút tìm rồi mới lọc kết quả lại được. 
-nếu được cải tiến thì khi tìm sách 1 thể loại thì cũng nên giới thiệu thêm các sách khác cùng thể loại, cùng tác giả. còn phần đánh giá sản phẩm ở đây đúng là đang khá yếu thật, có nhiều cái đã bán được 10k nhưng vẫn chưa có đánh giá nào, khiến người muốn mua không có gì để tham khảo, nên cân nhắc đánh giá thì được tích điểm thêm hay voucher để khuyến khích việc đánh giá. 
-về giỏ hàng thì giỏ hàng không hiện số lượng có trong giỏ hàng nếu đang ở trang khác, phải bấm vào để kiểm tra xem khá bất tiện, nên hiện số lượng, hiện đại hơn thì có thể hiện bản xem trước là trong giỏ hàng đã có gì. 
-nhưng chỉ được áp dụng 1 gift card trên đơn thôi, không thể cộng dồn vô được. nó có sẵn gợi ý là mua thêm bao nhiêu để được nhận quà rồi nên đó không phải cải tiến,  với chưa ghi là đã tiết kiệm được bao nhiêu thôi, chỉ ghi là giảm bao nhiêu từ voucher nào. có tính năng gói quà khúc chọn thanh toán, khá nổi bật."
-
-Cũng như câu lệnh để tạo HTML và CSS theo đề xuất: 
-"Tôi đang thực hiện bài tập phát triển giao diện website thương mại điện tử
-bằng HTML5 và CSS3.
-
-Tôi muốn cải tiến khu vực: trưng bày sản phẩm giảm giá 
-Đối tượng sử dụng: khách hàng mua sắm trực tuyến tại Việt Nam.
-
-Hãy đề xuất:
-1. Bố cục giao diện.
-2. Các thành phần HTML cần sử dụng.
-3. Cách tổ chức CSS.
-4. Cách hiển thị trên máy tính và điện thoại.
-5. Những điểm cần kiểm tra về khả năng sử dụng.
-
-Trước tiên, hãy giải thích phương án thiết kế.
-Chưa tạo toàn bộ mã nguồn cho đến khi tôi yêu cầu."
-
-Em cũng đề xuất chỉnh sửa giao diện bằng lệnh : "tôi thấy cái phần giảm giá bao nhiêu % đang còn nhỏ, hơi khó để ý. bạn sửa lại cho tôi được không."
+Các câu lệnh em đã sử dụng cho AI cũng như câu trả lời của AI đều được lưu trong link này: https://claude.ai/share/24627fbd-3c73-4193-a1c8-cf9c39fd3096 
 
 ## 4. Kết quả AI đề xuất
 
-AI đề xuất thiết kế khu vực sản phẩm giảm giá theo hình thức một kệ hàng khuyến mãi, gồm tiêu đề, đồng hồ đếm ngược và danh sách sản phẩm. Trên mỗi thẻ sản phẩm có hình ảnh, tên sách, giá bán, giá gốc, tỷ lệ giảm giá, điểm đánh giá và số lượng đã bán.
+AI đề xuất cải tiến giao diện Flash Sale cho sách bằng cách tối ưu hóa trải nghiệm tương tác (UX) và khả năng phản hồi trên di động (Responsive). Cụ thể, AI gợi ý thêm các hiệu ứng :hover (nổi thẻ 3D và đổ bóng) cùng trạng thái :focus-visible để tăng tính tiếp cận. Đối với màn hình điện thoại (iPhone SE 375px), AI đề xuất cấu hình Flexbox cho phần tiêu đề Flash Sale và thêm thuộc tính white-space: nowrap cho các nút bấm để tránh bị tràn chữ.
 
-Theo đề xuất của AI, việc hiển thị thêm đánh giá và số lượng đã bán có thể giúp khách hàng tham khảo sản phẩm nhanh hơn. AI cũng tạo mã nguồn HTML và CSS ban đầu để xây dựng giao diện minh họa.
+Bên cạnh đó, AI cũng hỗ trợ tạo mã nguồn CSS chi tiết cho phần tương tác thẻ sản phẩm và bổ sung bảng kiểm thử (Test Table) để đánh giá các tiêu chí hoàn thiện của website.
 
 ## 5. Kiểm tra và điều chỉnh
 
-Sau khi đối chiếu nhận xét của AI với website FAHASA thực tế, em nhận thấy một số nội dung cần điều chỉnh:
+Sau khi đối chiếu mã nguồn và trực tiếp kiểm tra giao diện trên Chrome DevTools ở chế độ di động (iPhone SE 375px), em đã chủ động điều chỉnh lại các đề xuất của AI để phù hợp với kiến trúc thực tế của bài tập:
 
-- Tìm kiếm: AI chưa quan sát được đầy đủ chức năng này. Thực tế, khi nhập từ khóa, website có gợi ý tên sách tương tự, tác phẩm theo tác giả và gợi ý ngay từ những ký tự đầu tiên. Tuy nhiên, việc lọc theo thể loại chưa thuận tiện ngay tại bước nhập từ khóa. Em đề xuất có thể gợi ý thêm sách cùng thể loại hoặc cùng tác giả để người mua dễ tìm sản phẩm liên quan.
-- Đánh giá sản phẩm: Một số sản phẩm có lượng bán cao nhưng chưa có đánh giá. Em đề xuất cân nhắc khuyến khích khách hàng đánh giá bằng điểm thưởng hoặc voucher để tăng lượng thông tin tham khảo cho người mua.
-- Giỏ hàng: Website chưa hiển thị rõ số lượng sản phẩm trong giỏ khi khách hàng đang ở trang khác. Em đề xuất hiển thị số lượng ngay trên biểu tượng giỏ hàng hoặc bổ sung phần xem nhanh giỏ hàng. Ngoài ra, website chỉ cho phép sử dụng một gift card trên mỗi đơn hàng và chưa thể hiện rõ tổng số tiền tiết kiệm được từ các ưu đãi.
-- Thông tin ưu đãi: Website đã có gợi ý mua thêm để nhận quà và có chức năng gói quà ở bước thanh toán. Vì vậy, em không xem đây là những chức năng cần bổ sung mới.
+Về lỗi rớt dòng nút "Xem tất cả": AI ban đầu đề xuất viết thêm một khối @media (max-width: 480px) riêng biệt. Tuy nhiên, do dự án phát triển theo hướng Mobile-First, việc thêm @media max-width là chưa đúng chuẩn. Em đã điều chỉnh trực tiếp ở CSS gốc: bỏ thuộc tính flex: 1 0 100% ở tiêu đề .sale__title, giảm nhẹ font-size và thêm white-space: nowrap cho link "Xem tất cả" để đường link nằm thẳng hàng, gọn gàng sát lề phải cùng với đếm ngược.
 
-Đối với giao diện minh họa, em thay đổi hình ảnh sản phẩm và chỉnh sửa đường dẫn ảnh trong file HTML để hiển thị đúng hình ảnh đã chọn, cũng như em có chỉnh sửa phần Phần trăm giảm giá hiển thị cho rõ ràng để dễ thu hút hơn. 
+Về lỗi tràn chữ nút "Thêm vào giỏ": Nút bấm bị đứt chữ "giỏ" xuống hàng dưới do kích thước chữ ban đầu quá lớn. Em đã điều chỉnh giảm font-size của .card__button xuống 0.8rem - 0.825rem kết hợp với white-space: nowrap để đảm bảo nút luôn vừa vặn trên 1 dòng duy nhất.
+
+Về bố cục danh sách sản phẩm (Grid): Em kiểm tra việc phân chia cột bằng CSS Grid để đảm bảo danh sách vừa hiển thị dạng lưới 5 cột cân đối trên máy tính, vừa hỗ trợ trải nghiệm cuộn mượt mà và không bị sát viền màn hình di động.
 
 ## 6. Phần em hiểu và có thể giải thích
 
-- HTML - thẻ `<img>` : Dùng để hiển thị hình ảnh sản phẩm. Em đã chỉnh sửa đường dẫn trong thuộc tính `src` để thay đổi ảnh bìa sách.
-- HTML - thẻ `<h1>`, `<h2>` và `<p>`: Dùng để hiển thị tiêu đề và nội dung văn bản trên trang.
-- CSS - thuộc tính 'color' và 'background-color': Dùng để thay đổi màu chữ và màu nền, giúp giá khuyến mãi và nhãn giảm giá nổi bật hơn.
-- CSS - thuộc tính 'font-size' và 'margin': Dùng để điều chỉnh kích thước chữ và khoảng cách giữa các thành phần.
-- CSS - '@media' : Cho phép thay đổi cách hiển thị khi kích thước màn hình thay đổi, hỗ trợ giao diện trên điện thoại.
+HTML - Semantic HTML5 (<article>, <img> với alt, <a>): Dùng <article> để đóng gói độc lập từng thẻ sản phẩm; <img> kèm thuộc tính alt để mô tả hình ảnh chuẩn SEO và hỗ trợ trình đọc màn hình; thẻ <a> dùng tạo liên kết điều hướng khi nhấp vào tên sách hoặc nút "Xem tất cả".
 
-Đây là những thành phần em tập trung tìm hiểu trong quá trình chỉnh sửa giao diện. Em sẽ đối chiếu lại với mã nguồn thực tế để đảm bảo phần giải thích đúng với những gì đã sử dụng.
+CSS - Box Model (margin, padding, border): Hiểu rõ sự khác biệt giữa padding và margin, giúp căn chỉnh nút bấm và tiêu đề không bị dính sát nhau.
+
+CSS - Bố cục Flexbox & Grid: Giải thích được tác dụng của justify-content và align-items trong .sale__header, cũng như lý do dùng CSS Grid cho danh sách .sale__list để quản lý bố cục 2 chiều.
+
+CSS - Class Selector & Pseudo-classes (:hover, :focus-visible): Dùng Class Selector để áp dụng kiểu dáng đồng bộ cho tất cả các thẻ sản phẩm, kết hợp các lớp giả để tạo hiệu ứng chuyển động (transition) khi di chuột.
