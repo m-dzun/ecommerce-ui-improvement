@@ -1,0 +1,52 @@
+<head>
+    <style>
+    #wrapper {
+        display: grid;
+       
+        grid-template-areas: 
+            "header header"
+            "nav main"
+            "footer footer";
+       
+        grid-template-columns: 1fr 3fr; 
+        gap: 10px; 
+
+        border: 2px solid black; 
+        padding: 10px;
+        width: 80%;
+        max-width: 600px;
+        margin: 40px auto; 
+        box-shadow: -15px 15px 15px rgba(0, 0, 0, 0.2); 
+        position: relative;
+    }
+    #wrapper::before {
+        content: "wrapper";
+        position: absolute;
+        top: -25px;
+        left: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    header { grid-area: header; }
+    nav    { grid-area: nav; }
+    main   { grid-area: main; }
+    footer { grid-area: footer; }
+
+    header, nav, main, footer {
+        border: 2px solid black; 
+        padding: 10px;
+        font-family: Arial, sans-serif;
+    }
+    header { min-height: 40px; }
+    nav, main { min-height: 200px; } 
+    footer { min-height: 30px; }
+</style>
+</head>
+<body>
+<div id="wrapper">
+<header>header</header>
+    <nav>nav</nav>
+    <main>main</main>
+    <footer>footer</footer>
+</div>
+</body>

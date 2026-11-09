@@ -1,0 +1,78 @@
+
+/* a. Đại học UEH */
+.ueh {
+    color: green;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 30px;
+}
+
+/* b. Khoa CNTT */
+.cntt {
+    color: rgba(255, 0, 0, 0.5);
+    text-align: right;
+    font-style: italic;
+    border: 2px dotted yellow;
+    border-radius: 10px;
+    background-color: gray;
+    font-size: 15px;
+}
+
+/* c. BIT-UEH */
+.bit {
+    color: #A7DD3C;
+    background: #FFFFFF;
+    text-shadow:
+        2px 0 0px #800040,
+        3px 2px 0px rgba(77,0,38,0.5),
+        3px 0 3px #FF002B,
+        5px 0 3px #800015,
+        6px 2px 3px rgba(77,0,13,0.5),
+        6px 0 9px #FF5500,
+        8px 0 9px #802A00,
+        9px 2px 9px rgba(77,25,0,0.5),
+        9px 0 18px #FFD500,
+        11px 0 18px #806A00,
+        12px 2px 18px rgba(77,66,0,0.5),
+        12px 0 30px #D4FF00,
+        14px 0 30px #6A8000,
+        15px 2px 30px rgba(64,77,0,0.5),
+        15px 0 45px #80FF00,
+        17px 0 45px #408000,
+        17px 2px 45px rgba(38,77,0,0.5);
+}
+
+/* d. Hình nền logo BIT */
+.logo-background {
+    background-image: url('https://ueh.edu.vn/schools/college/images/logo/bit-header-logo.png');
+    background-size: 30px 30px;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    min-height: 200px;
+}
+
+/* e. Định dạng đoạn văn */
+
+/* i. Rộng 100px, cao 50px, ẩn nội dung khi bị tràn */
+.doan-van-1 {
+    width: 100px;
+    height: 50px;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+/* ii. Cắt nội dung bị tràn với dấu ... */
+.doan-van-2 {
+    width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+}
+
+/* iii. Không xuống dòng */
+.doan-van-3 {
+    white-space: nowrap;
+    font-weight: bold;
+}

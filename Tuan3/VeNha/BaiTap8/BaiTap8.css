@@ -1,0 +1,109 @@
+
+
+#root {
+    width: 1024px;
+    max-width: 100%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+#site-header {
+    background-color: #ccc;
+    margin: 0 0 20px 0;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    text-shadow: 2px 2px 3px black;
+}
+
+#site-header i {
+    margin-right: 10px;
+    font-size: 25px;
+    color: black;
+}
+
+.bat-icon {
+   
+    font-size: 25px;
+}
+
+.superheroes {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.superheroes li {
+    width: 110px;
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+    transition: width 0.3s ease;
+}
+
+.superheroes img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+}
+
+.hero-header {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 100%;
+    color: white;
+    font-size: 13px;
+    text-shadow: 1px 1px 3px black;
+    opacity: 0.5;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+.superheroes a {
+    display: none;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 4px;
+    padding: 7px;
+    background-color: #666;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+
+.superheroes li:hover,
+.superheroes li:focus-within {
+    width: 150px;
+    z-index: 2;
+}
+
+
+.superheroes li:hover .hero-header,
+.superheroes li:focus-within .hero-header {
+    opacity: 1;
+}
+
+.superheroes li:hover a,
+.superheroes li:focus-within a {
+    display: block;
+}
+
+
+.superheroes a:hover,
+.superheroes a:focus {
+    text-decoration: underline;
+}
+
+.superheroes li:focus-visible {
+    outline: 2px solid #555;
+    outline-offset: 3px;
+}
