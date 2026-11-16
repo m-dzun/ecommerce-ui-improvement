@@ -5,5 +5,5 @@ $(function () {
 
     // and now add the new element after the panel
     var panel = $('.panel');
-img.insertBefore(panel);
+   img.insertBefore(panel);
 });

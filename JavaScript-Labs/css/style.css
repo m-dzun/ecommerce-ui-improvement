@@ -1,0 +1,527 @@
+
+/* ==============================
+   1. CAU HINH CHUNG
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fffafa;
+    color: #35151b;
+    line-height: 1.7;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ==============================
+   2. HEADER
+============================== */
+
+.header {
+    background-color: #4b101d;
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #e8a0a9;
+}
+
+.navbar {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar a {
+    color: #f9e9ec;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #e8a0a9;
+}
+
+
+/* ==============================
+   3. HERO
+============================== */
+
+.hero {
+    background: linear-gradient(135deg, #3b0b17, #751c31, #a8324a);
+    color: white;
+    padding: 110px 0;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-text {
+    max-width: 650px;
+}
+
+.hero-subtitle {
+    color: #f2b6c0;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.15;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #f2b6c0;
+}
+
+.hero-description {
+    color: #f8e8eb;
+    font-size: 17px;
+    max-width: 550px;
+    margin-bottom: 35px;
+}
+
+.primary-button {
+    display: inline-block;
+    background-color: #f1b6c0;
+    color: #4b101d;
+    padding: 13px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.primary-button:hover {
+    background-color: white;
+    transform: translateY(-3px);
+}
+
+
+/* Hinh trang tri */
+
+.hero-decoration {
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.js-circle {
+    width: 240px;
+    height: 240px;
+    border: 2px solid #f2b6c0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 90px;
+    font-weight: bold;
+    color: #f2b6c0;
+    background-color: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 0 50px rgba(242, 182, 192, 0.15);
+}
+
+.decoration-text {
+    color: #f2b6c0;
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-top: 20px;
+}
+
+
+/* ==============================
+   4. CAC SECTION
+============================== */
+
+.section {
+    padding: 85px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-label {
+    color: #a8324a;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.section-heading h2 {
+    color: #4b101d;
+    font-size: 34px;
+}
+
+.heading-description {
+    color: #80676d;
+    margin-top: 10px;
+}
+
+
+/* ==============================
+   5. PROFILE
+============================== */
+
+.profile-section {
+    background-color: #fffafa;
+}
+
+.profile-card {
+    max-width: 850px;
+    margin: auto;
+    padding: 35px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: white;
+    border-radius: 12px;
+    border-left: 6px solid #8f263d;
+    box-shadow: 0 8px 30px rgba(75, 16, 29, 0.08);
+}
+
+.profile-image {
+    width: 190px;
+    height: 190px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #f4dce1;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info h3 {
+    color: #741c31;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.profile-info p {
+    color: #62474d;
+    margin: 8px 0;
+}
+
+.profile-info strong {
+    color: #4b101d;
+}
+
+.profile-info a {
+    color: #a8324a;
+    font-weight: bold;
+}
+
+.profile-info a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==============================
+   6. INTRODUCTION
+============================== */
+
+.introduction-section {
+    background-color: #f8edef;
+}
+
+.introduction-card {
+    max-width: 950px;
+    margin: auto;
+    padding: 35px 40px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(75, 16, 29, 0.06);
+}
+
+.introduction-card p {
+    color: #62474d;
+    font-size: 16px;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.introduction-card p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ==============================
+   7. LAB CARDS
+============================== */
+
+.labs-section {
+    background-color: #fffafa;
+}
+
+.lab-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.lab-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #f0dce0;
+    box-shadow: 0 8px 25px rgba(75, 16, 29, 0.06);
+    transition: 0.3s;
+}
+
+.lab-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(75, 16, 29, 0.13);
+}
+
+.lab-number {
+    background: linear-gradient(135deg, #4b101d, #a8324a);
+    color: white;
+    font-size: 55px;
+    font-weight: bold;
+    text-align: center;
+    padding: 25px;
+}
+
+.lab-content {
+    padding: 25px;
+}
+
+.lab-tag {
+    color: #a8324a;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.lab-content h3 {
+    color: #4b101d;
+    font-size: 25px;
+}
+
+.lab-content h4 {
+    color: #8f263d;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.lab-content > p:not(.lab-tag) {
+    color: #80676d;
+    font-size: 14px;
+    min-height: 100px;
+    margin-bottom: 25px;
+}
+
+.lab-button {
+    display: inline-block;
+    background-color: #7c1d33;
+    color: white;
+    padding: 11px 18px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.lab-button:hover {
+    background-color: #b23a53;
+}
+
+
+/* ==============================
+   8. FOOTER
+============================== */
+
+.footer {
+    background-color: #3b0b17;
+    color: #f8e8eb;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.footer h3 {
+    color: #f2b6c0;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    font-size: 14px;
+}
+
+.copyright {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    color: #d7aeb6;
+}
+
+
+/* ==============================
+   9. RESPONSIVE
+============================== */
+
+@media screen and (max-width: 900px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .js-circle {
+        width: 190px;
+        height: 190px;
+        font-size: 70px;
+    }
+
+    .lab-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media screen and (max-width: 650px) {
+
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 20px;
+    }
+
+    .hero {
+        padding: 70px 0;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .js-circle {
+        width: 160px;
+        height: 160px;
+        font-size: 60px;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+        gap: 20px;
+    }
+
+    .profile-image {
+        width: 160px;
+        height: 160px;
+    }
+
+    .introduction-card {
+        padding: 25px;
+    }
+
+    .lab-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lab-content > p:not(.lab-tag) {
+        min-height: auto;
+    }
+    /* NUT GITHUB */
+
+.github-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 18px 32px;
+    background-color: white;
+    color: #4b101d !important;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.github-button span {
+    font-size: 23px;
+}
+
+.github-button:hover {
+    background-color: #f2b6c0;
+    transform: translateY(-3px);
+}
+}
