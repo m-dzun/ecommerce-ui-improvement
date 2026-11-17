@@ -1,0 +1,329 @@
+
+/* ==============================
+   GIAO DIEN CHUNG CHO CAC LAB
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fffafa;
+    color: #35151b;
+    line-height: 1.7;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* HEADER */
+
+.header {
+    background-color: #4b101d;
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #e8a0a9;
+}
+
+.navbar {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar a {
+    color: #f9e9ec;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #e8a0a9;
+}
+
+/* HERO */
+
+.lab-hero {
+    background: linear-gradient(135deg, #3b0b17, #751c31, #a8324a);
+    color: white;
+    padding: 75px 0;
+}
+
+.lab-hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.lab-hero-text {
+    max-width: 750px;
+}
+
+.lab-subtitle {
+    color: #f2b6c0;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.lab-hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.lab-hero h1 span {
+    color: #f2b6c0;
+}
+
+.lab-hero-description {
+    color: #f8e8eb;
+    font-size: 16px;
+    max-width: 700px;
+}
+
+.lab-badge {
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+    border: 2px solid #f2b6c0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f2b6c0;
+    font-size: 55px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+/* BUTTON */
+
+.back-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 13px 25px;
+    background-color: white;
+    color: #4b101d;
+    border-radius: 7px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    background-color: #f2b6c0;
+    transform: translateY(-3px);
+}
+
+/* EXERCISE SECTION */
+
+.exercise-section {
+    padding: 75px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-label {
+    color: #a8324a;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.section-heading h2 {
+    color: #4b101d;
+    font-size: 32px;
+}
+
+.heading-description {
+    color: #80676d;
+    margin-top: 10px;
+}
+
+/* EXERCISE LIST */
+
+.exercise-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.exercise-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 23px;
+    background-color: white;
+    border: 1px solid #f0dce0;
+    border-left: 5px solid #8f263d;
+    border-radius: 9px;
+    box-shadow: 0 5px 18px rgba(75, 16, 29, 0.05);
+    transition: 0.3s;
+}
+
+.exercise-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(75, 16, 29, 0.1);
+}
+
+.exercise-number {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #7c1d33;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.exercise-info h3 {
+    color: #4b101d;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.exercise-info p {
+    color: #80676d;
+    font-size: 14px;
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: #3b0b17;
+    color: #f8e8eb;
+    text-align: center;
+    padding: 35px 0;
+}
+
+.footer h3 {
+    color: #f2b6c0;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    font-size: 14px;
+}
+
+.copyright {
+    margin-top: 18px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    color: #d7aeb6;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 750px) {
+    .container {
+        width: 90%;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    .lab-hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .lab-hero h1 {
+        font-size: 36px;
+    }
+
+    .lab-badge {
+        width: 120px;
+        height: 120px;
+        font-size: 42px;
+    }
+
+    .exercise-list {
+        grid-template-columns: 1fr;
+    }
+
+    .exercise-section {
+        padding: 55px 0;
+    }
+    /* NUT XEM KET QUA */
+
+.exercise-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 9px 17px;
+    background-color: #7c1d33;
+    color: white;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.exercise-button:hover {
+    background-color: #a8324a;
+    transform: translateY(-2px);
+}
+
+/* GHI CHU BAI KHONG CO HTML */
+
+.exercise-note {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 7px 12px;
+    background-color: #f8edef;
+    color: #8f263d;
+    border-radius: 5px;
+    font-size: 12px;
+    font-style: italic;
+}
+}
