@@ -1,7 +1,7 @@
 
 // Dán URL GitHub Repository và GitHub Pages của bạn vào đây.
 const GITHUB_REPOSITORY_URL = "https://github.com/m-dzun/ecommerce-ui-improvement";
-const GITHUB_PAGES_URL = "https://m-dzun.github.io/ecommerce-ui-improvement/FE_NangCao";
+const GITHUB_PAGES_URL = "https://m-dzun.github.io/ecommerce-ui-improvement/FE_NangCao/Bai1.html";
 
 // Danh sách các liên kết trên trang web
 const links = [
