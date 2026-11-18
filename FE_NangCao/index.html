@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Trang bài tập Front-end nâng cao của Hoàng Thị Mỹ Dung.">
+  <title>My Grimoire | Front-end nâng cao</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Trang chủ">
+      <span class="brand-mark">✦</span>
+      <span>MY GRIMOIRE</span>
+    </a>
+    <span class="course-tag"><span class="pulse"></span> FRONT-END ADVANCED</span>
+  </header>
+
+  <main class="page-shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> THE BEGINNING OF A NEW QUEST</p>
+        <h1>WELCOME TO<br><em>MY</em> GRIMOIRE</h1>
+        <p class="intro">Mỗi dòng code là một phép thuật. Đây là nơi lưu giữ hành trình học tập và những sản phẩm Front-end của mình.</p>
+        <a class="scroll-link" href="#profile">EXPLORE MY WORLD <span>↓</span></a>
+      </div>
+      <div class="grimoire-wrap" aria-label="Minh họa quyển sách phép thuật">
+        <div class="magic-circle circle-one"></div>
+        <div class="magic-circle circle-two"></div>
+        <div class="rune rune-one">ᛟ</div><div class="rune rune-two">✧</div>
+        <div class="book">
+          <div class="book-cover">
+            <div class="cover-border">
+              <div class="cover-star">✦</div>
+              <div class="cover-title">CODE<br><small>GRIMOIRE</small></div>
+              <div class="cover-symbol">◇</div>
+              <div class="cover-subtitle">VOL. 01 · 2026</div>
+            </div>
+          </div>
+          <div class="book-pages"></div>
+        </div>
+        <span class="spark spark-a">✦</span><span class="spark spark-b">✧</span><span class="spark spark-c">✦</span>
+      </div>
+    </section>
+
+    <section class="content-grid" id="profile">
+      <article class="panel profile-panel">
+        <div class="section-heading">
+          <span class="heading-icon">♜</span>
+          <div><p class="eyebrow">IDENTITY RECORD</p><h2>Thông tin cá nhân</h2></div>
+        </div>
+        <div class="profile-list">
+          <div class="info-row"><span class="info-label">HỌ VÀ TÊN</span><strong>Hoàng Thị Mỹ Dung</strong></div>
+          <div class="info-row"><span class="info-label">MÃ SỐ SINH VIÊN</span><strong>31241026863</strong></div>
+          <div class="info-row"><span class="info-label">MÃ HỌC PHẦN</span><strong>26C1INF50902701</strong></div>
+          <div class="info-row"><span class="info-label">MÔN HỌC</span><strong>Front-end nâng cao</strong></div>
+        </div>
+        <div class="profile-foot"><span class="seal">✦</span><span>REGISTERED MAGIC USER <b>·</b> 2026</span></div>
+      </article>
+
+      <article class="panel links-panel">
+        <div class="section-heading">
+          <span class="heading-icon">⌘</span>
+          <div><p class="eyebrow">MY DIGITAL ARCHIVE</p><h2>Không gian bài tập</h2></div>
+        </div>
+        <p class="panel-desc">Truy cập kho mã nguồn và phiên bản website được triển khai của mình.</p>
+        <a class="resource-link" id="repoLink" href="#" target="_blank" rel="noopener noreferrer">
+          <span class="resource-icon">⌘</span><span><b>GitHub Repository</b><small>Kho lưu trữ mã nguồn</small></span><span class="link-arrow">↗</span>
+        </a>
+        <a class="resource-link" id="pageLink" href="#" target="_blank" rel="noopener noreferrer">
+          <span class="resource-icon">✧</span><span><b>GitHub Pages</b><small>Website bài tập trực tuyến</small></span><span class="link-arrow">↗</span>
+        </a>
+        <p class="link-note">* Cập nhật đường dẫn GitHub Repository và GitHub Pages trong file <b>script.js</b>.</p>
+      </article>
+    </section>
+
+    <section class="quote-panel">
+      <span class="quote-mark">“</span>
+      <p>LIMITLESS POSSIBILITIES BEGIN WITH A SINGLE LINE OF CODE.</p>
+      <span class="quote-caption">— MY FRONT-END JOURNEY —</span>
+    </section>
+  </main>
+
+  <footer><span>© 2026 · HOÀNG THỊ MỸ DUNG</span><span>CRAFTED WITH <b>✦</b> AND CODE</span></footer>
+</body>
+</html>
