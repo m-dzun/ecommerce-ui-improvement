@@ -1,0 +1,133 @@
+/* =====================================================
+   UrbanTee - style.css (đặt SAU file CSS của Bootstrap)
+   ===================================================== */
+
+/* ---------- Chung ---------- */
+body { background: #fafafa; }
+.navbar-brand { padding: 10px 15px; }
+#content { padding-bottom: 20px; }
+.site-footer {
+  border-top: 1px solid #e7e7e7;
+  background: #fff;
+  padding: 20px 0;
+  margin-top: 20px;
+  text-align: center;
+  color: #777;
+}
+
+/* Ô search trên mobile (nằm cạnh logo và nút 3 gạch) */
+.mobile-search {
+  width: calc(100% - 220px);
+  min-width: 90px;
+  vertical-align: top;
+}
+
+/* ---------- Slider ---------- */
+.carousel { margin-bottom: 20px; }
+.carousel-caption h3 { text-shadow: 0 1px 4px rgba(0, 0, 0, .6); }
+
+/* ---------- Danh mục ---------- */
+.list-group-item a { color: #555; display: block; }
+.list-group-item:hover { background: #f5f5f5; }
+
+/* ---------- Thẻ sản phẩm ---------- */
+.thumbnail .caption { padding: 9px 12px 12px; }
+.thumbnail .caption p.desc { min-height: 40px; color: #555; }
+
+/* Dấu "+" đè lên mép dưới của ảnh */
+.add-to-cart {
+  height: 0;
+  text-align: center;
+  position: relative;
+  top: -16px;
+}
+.add-to-cart a {
+  font-size: 30px;
+  line-height: 1;
+  color: #337ab7;
+  background: #fff;
+  border-radius: 50%;
+  display: inline-block;
+}
+.add-to-cart a:hover { color: #286090; text-decoration: none; }
+
+/* Sao đánh giá */
+.ratings .glyphicon-star,
+.ratings .glyphicon-star-empty,
+.rating-stars .glyphicon { color: #f5a623; }
+.ratings { margin-top: 5px; }
+
+/* ---------- Trạng thái kho (progress bar) ---------- */
+.stock-mini { margin: 8px 0 6px; }
+.stock-mini small { color: #777; }
+.stock-mini .progress { height: 8px; margin: 3px 0 4px; }
+
+.stock-row { margin-bottom: 8px; }
+.stock-row .progress { margin-bottom: 0; }
+.stock-row .col-xs-2,
+.stock-row .col-xs-3 { line-height: 20px; }
+.stock-legend .label { margin-right: 4px; display: inline-block; margin-bottom: 4px; }
+
+/* ---------- Trang chi tiết ---------- */
+.thumbnails { margin-top: 10px; margin-left: -5px; margin-right: -5px; }
+.thumbnails > [class*="col-"] { padding-left: 5px; padding-right: 5px; }
+.product-info { padding: 0 10px 10px; }
+.product-info .form-group { margin-bottom: 12px; }
+.product-info #number { width: 70px; }
+#size-group .btn.active { background: #5cb85c; border-color: #4cae4c; color: #fff; }
+
+/* ---------- Bình luận ---------- */
+.comment hr { margin: 12px 0; }
+.comment .row { margin-left: 0; margin-right: 0; }
+.comment .comment-body { padding: 0 15px; }
+
+/* ---------- Trạng thái đơn hàng ---------- */
+.order-row { padding: 8px 12px; margin-bottom: 10px; }
+.order-row [class*="col-"] { padding-top: 4px; padding-bottom: 4px; }
+
+/* =====================================================
+   xZoom + Bootstrap: reset để zoom không bị lệch
+   (khuyến nghị trong tài liệu xZoom)
+   ===================================================== */
+.xzoom-source img,
+.xzoom-preview img,
+.xzoom-lens img {
+  display: block;
+  max-width: none;
+  max-height: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+/* Ảnh chính co giãn theo cột (đặt sau rule reset nên thắng) */
+img.xzoom,
+.xzoom-source img.xzoom {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+.xzoom-container { width: 100%; }
+.xzoom-preview {
+  z-index: 1100;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+/* Ảnh nhỏ đang được chọn */
+.xzoom-gallery { cursor: pointer; }
+.xzoom-gallery.xactive { border-color: #5cb85c; }
+/* ===== Badge trên ảnh sản phẩm ===== */
+.thumbnail { position: relative; }
+.badge-discount {
+  position: absolute; top: 10px; left: 4px; z-index: 5;
+  background: #e5262d; color: #fff; font-size: 12px; font-weight: bold;
+  padding: 4px 8px 10px;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%); /* hình khiên như ảnh mẫu */
+}
+.badge-tag {
+  position: absolute; top: 10px; right: 4px; z-index: 5;
+  color: #fff; font-size: 12px; padding: 4px 14px;
+}
+.badge-new  { background: #e5262d; }
+.badge-best { background: #f0ad4e; }
+.old-price { color: #999; text-decoration: line-through; font-weight: normal; font-size: 12px; }

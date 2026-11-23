@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Áo thun Basic - Diesel</title>
+
+  <!-- Bootstrap 3 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css">
+  <!-- xZoom CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/xzoom/dist/xzoom.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.9/css/star-rating.min.css">
+  <!-- CSS riêng của bài (đặt sau cùng) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= NAVBAR (giống trang chủ) ================= -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="ecommerce.html">
+          <!-- ĐỔI ẢNH: logo shop (cao 30px) -->
+          <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Diesel_logo.svg/3840px-Diesel_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail" alt="Diesel" height="30">
+        </a>
+        <form class="visible-xs-inline-block mobile-search search-form" style="margin-top:10px">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Tìm kiếm">
+          </div>
+        </form>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="ecommerce.html">Trang chủ <span class="sr-only">(current)</span></a></li>
+          <li><a href="#">Khuyến mãi</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+               aria-haspopup="true" aria-expanded="false">Danh mục <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Áo thun nam</a></li>
+              <li><a href="#">Áo thun nữ</a></li>
+              <li><a href="#">Áo polo</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Phụ kiện</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <form class="navbar-form navbar-left hidden-xs search-form">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Tìm kiếm">
+          </div>
+          <button type="submit" class="btn btn-default">Tìm</button>
+        </form>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="ecommerce-status.html">
+              <span class="badge pull-right" id="cart-count">4</span>
+              <i class="glyphicon glyphicon-shopping-cart"></i>
+            </a>
+          </li>
+          <li><a href="ecommerce-status.html"><i class="glyphicon glyphicon-user"></i></a></li>
+          <li><a href="#" data-toggle="modal" data-target="#myModal">Sign in</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container" id="content">
+    <div class="row">
+
+      <!-- Cột trái: danh mục -->
+      <div class="col-sm-4 col-md-3">
+        <h3>Danh mục</h3>
+        <ul class="list-group">
+          <li class="list-group-item"><a href="#">Áo thun nam</a></li>
+          <li class="list-group-item"><a href="#">Áo thun nữ</a></li>
+          <li class="list-group-item"><a href="#">Áo polo</a></li>
+          <li class="list-group-item"><a href="#">Áo sơ mi</a></li>
+          <li class="list-group-item"><a href="#">Áo khoác</a></li>
+          <li class="list-group-item"><a href="#">Quần jean</a></li>
+          <li class="list-group-item"><a href="#">Quần short</a></li>
+          <li class="list-group-item"><a href="#">Váy &amp; Đầm</a></li>
+          <li class="list-group-item"><a href="#">Mũ &amp; Nón</a></li>
+          <li class="list-group-item"><a href="#">Phụ kiện</a></li>
+        </ul>
+      </div>
+
+      <!-- Cột phải -->
+      <div class="col-sm-8 col-md-9">
+
+        <!-- ============ 1. HÌNH + MÔ TẢ + FORM ============ -->
+        <div class="thumbnail">
+          <div class="row">
+
+            <!-- Cột hình: ---->
+            <div class="col-sm-6">
+              <div class="xzoom-container">
+                <!-- Giữ nguyên link ảnh chính gốc Diesel; bổ sung xoriginal để xZoom hoạt động -->
+                <img class="xzoom img-responsive" id="xzoom-main"
+                     src="https://vn.diesel.com/dw/image/v2/BBLG_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dw3030c228/images/large/A23234_0DLBW_96H_I.jpg?sw=1006&sh=1341&sm=fit"
+                     xoriginal="https://vn.diesel.com/dw/image/v2/BBLG_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dw3030c228/images/large/A23234_0DLBW_96H_I.jpg?sw=1006&sh=1341&sm=fit"
+                     alt="Áo thun Diesel - mặt trước">
+
+                <!-- Ảnh nhỏ (-1), ảnh xem trước (-2), ảnh zoom độ phân giải cao (-3) -->
+                <div class="thumbnails row">
+                  <div class="col-xs-3">
+                    <a href="images/mat-truoc-3.png">
+                      <img class="xzoom-gallery img-thumbnail img-responsive"
+                           src="images/mat-truoc-1.png"
+                           xpreview="https://vn.diesel.com/dw/image/v2/BBLG_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dw3030c228/images/large/A23234_0DLBW_96H_I.jpg?sw=1006&sh=1341&sm=fit"
+                           title="Mặt trước" alt="Mặt trước">
+                    </a>
+                  </div>
+                  <div class="col-xs-3">
+                    <a href="images/mat-sau-3.png">
+                      <img class="xzoom-gallery img-thumbnail img-responsive"
+                           src="images/mat-sau-1.png"
+                           xpreview="images/mat-sau-2.png"
+                           title="Mặt sau" alt="Mặt sau">
+                    </a>
+                  </div>
+                  <div class="col-xs-3">
+                    <a href="images/co-ao-3.png">
+                      <img class="xzoom-gallery img-thumbnail img-responsive"
+                           src="images/co-ao-1.png"
+                           xpreview="images/co-ao-2.png"
+                           title="Chi tiết cổ áo" alt="Chi tiết cổ áo">
+                    </a>
+                  </div>
+                  <div class="col-xs-3">
+                    <a href="images/chi-tiet-3.png">
+                      <img class="xzoom-gallery img-thumbnail img-responsive"
+                           src="images/chi-tiet-1.png"
+                           xpreview="images/chi-tiet-2.png"
+                           title="Chi tiết họa tiết và vải" alt="Chi tiết họa tiết và vải">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cột mô tả -->
+            <div class="col-sm-6">
+              <div class="product-info" id="product-basic">
+                <h4 class="pull-right">149.000đ</h4>
+                <h4><a href="#product-basic">Áo thun Basic Cotton</a></h4>
+                <p>Áo thun cotton 100% mềm mịn, thấm hút mồ hôi tốt, form regular dễ mặc. Phù hợp đi học, đi làm và đi chơi, dễ phối với quần jean hoặc quần short.</p>
+
+                <!-- Trạng thái kho tổng: progress bar (striped + active) -->
+                <p><strong>Tình trạng kho:</strong> <span id="total-stock-text">còn 88/200 sản phẩm (44%)</span></p>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar"
+                       aria-valuenow="44" aria-valuemin="0" aria-valuemax="100" style="width: 44%">44%</div>
+                </div>
+
+                <form role="form" id="order-form">
+                  <div class="number form-group">
+                    <label for="number">Số lượng</label>
+                    <input type="number" class="input-sm" id="number" value="1" min="1">
+                  </div>
+                  <div class="form-group">
+                    <label for="color">Màu</label>
+                    <select id="color">
+                      <option name="color">Trắng</option>
+                      <option name="color">Đen</option>
+                      <option name="color">Xanh navy</option>
+                      <option name="color">Be</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>Size</label>
+                    <div class="btn-group" id="size-group">
+                      <button type="button" class="btn btn-default" data-size="XS" data-stock="6">XS</button>
+                      <button type="button" class="btn btn-default" data-size="S" data-stock="28">S</button>
+                      <button type="button" class="btn btn-default" data-size="M" data-stock="34">M</button>
+                      <button type="button" class="btn btn-default" data-size="L" data-stock="16">L</button>
+                      <button type="button" class="btn btn-default" data-size="XL" data-stock="4">XL</button>
+                    </div>
+                    <p class="help-block" id="size-stock">Chọn size để xem số lượng còn lại.</p>
+                  </div>
+                  <div class="form-group">
+                    <button type="button" class="btn btn-default">Liên hệ shop</button>
+                    <button type="submit" class="btn btn-success">Thêm vào giỏ</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ============ 2. TRẠNG THÁI KHO (progress bar Bootstrap) ============ -->
+        <div class="panel panel-default">
+          <div class="panel-heading"><strong>Trạng thái kho - Áo thun Basic Cotton</strong></div>
+          <div class="panel-body">
+
+            <!-- Progress bar xếp chồng: phân bổ 200 sản phẩm nhập kho -->
+            <p><strong>Phân bổ 200 sản phẩm đã nhập kho</strong></p>
+            <div class="progress">
+              <div class="progress-bar progress-bar-success" style="width: 44%">Còn hàng 88</div>
+              <div class="progress-bar progress-bar-warning" style="width: 15%">Giữ đơn 30</div>
+              <div class="progress-bar progress-bar-info" style="width: 41%">Đã bán 82</div>
+            </div>
+            <hr>
+
+            <!-- Tồn kho theo từng size (tối đa 40/size) -->
+            <p><strong>Tồn kho theo size</strong> (mỗi size nhập tối đa 40 sản phẩm)</p>
+
+            <div class="row stock-row">
+              <div class="col-xs-2"><strong>XS</strong></div>
+              <div class="col-xs-7">
+                <div class="progress">
+                  <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%">15%</div>
+                </div>
+              </div>
+              <div class="col-xs-3 text-right">6/40</div>
+            </div>
+
+            <div class="row stock-row">
+              <div class="col-xs-2"><strong>S</strong></div>
+              <div class="col-xs-7">
+                <div class="progress">
+                  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">70%</div>
+                </div>
+              </div>
+              <div class="col-xs-3 text-right">28/40</div>
+            </div>
+
+            <div class="row stock-row">
+              <div class="col-xs-2"><strong>M</strong></div>
+              <div class="col-xs-7">
+                <div class="progress">
+                  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%">85%</div>
+                </div>
+              </div>
+              <div class="col-xs-3 text-right">34/40</div>
+            </div>
+
+            <div class="row stock-row">
+              <div class="col-xs-2"><strong>L</strong></div>
+              <div class="col-xs-7">
+                <div class="progress">
+                  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">40%</div>
+                </div>
+              </div>
+              <div class="col-xs-3 text-right">16/40</div>
+            </div>
+
+            <div class="row stock-row">
+              <div class="col-xs-2"><strong>XL</strong></div>
+              <div class="col-xs-7">
+                <div class="progress">
+                  <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%"><span class="sr-only">10%</span></div>
+                </div>
+              </div>
+              <div class="col-xs-3 text-right">4/40 <span class="label label-danger">Sắp hết</span></div>
+            </div>
+
+            <p class="stock-legend" style="margin-top:12px">
+              <span class="label label-success">&ge; 60% còn nhiều</span>
+              <span class="label label-warning">30 - 59% sắp hết</span>
+              <span class="label label-danger">&lt; 30% rất ít</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- ============ 3. ĐÁNH GIÁ + BÌNH LUẬN ============ -->
+        <div class="thumbnail comment" id="comments">
+          <div class="caption">
+            <div class="description">
+              <p>Áo thun Basic được nhiều khách hàng đánh giá cao về chất vải mềm, đường may chắc chắn và giá thành hợp lý. Giặt máy nhiều lần vẫn giữ form và không bị xù lông.</p>
+            </div>
+            <div class="ratings">
+              <p class="pull-right">3 đánh giá</p>
+              <p>
+              <input type="number" class="rating" value="4" data-display-only="true" data-size="xs" data-show-caption="false" data-show-clear="false">
+                4.0 sao
+              </p>
+            </div>
+          </div>
+
+          <div class="well" style="margin:0 15px 15px">
+            <div class="text-right">
+              <a class="btn btn-success" href="#">Viết đánh giá</a>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 comment-body">
+              <span class="rating-stars">
+               <input type="number" class="rating" value="4" data-display-only="true" data-size="xs" data-show-caption="false" data-show-clear="false">
+              </span>
+              Nguyễn Minh Anh
+              <span class="pull-right">1 ngày trước</span>
+              <p>Từ <em>TP. Hồ Chí Minh</em></p>
+              <p>Chất vải rất tốt, mặc mát và không bị nhăn. Mình sẽ mua thêm màu khác!</p>
+              <hr>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 comment-body">
+              <span class="rating-stars">
+               <input type="number" class="rating" value="4" data-display-only="true" data-size="xs" data-show-caption="false" data-show-clear="false">
+              </span>
+              Trần Quốc Bảo
+              <span class="pull-right">2 ngày trước</span>
+              <p>Từ <em>Hà Nội</em></p>
+              <p>Giao hàng nhanh, mình đã đặt thêm một chiếc nữa cho bạn.</p>
+              <hr>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 comment-body">
+              <span class="rating-stars">
+               <input type="number" class="rating" value="4" data-display-only="true" data-size="xs" data-show-caption="false" data-show-clear="false">
+              </span>
+              Lê Thu Hà
+              <span class="pull-right">5 ngày trước</span>
+              <p>Từ <em>Đà Nẵng</em></p>
+              <p>Cũng có vài mẫu đẹp hơn, nhưng với mức giá này thì mình rất hài lòng, đáng mua.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ 4. SẢN PHẨM KHÁC ============ -->
+        <h4>Sản phẩm khác bạn có thể thích</h4>
+        <div class="row">
+
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <!-- ĐỔI ẢNH: sản phẩm khác 1 (750x600) -->
+              <img src="https://placehold.co/750x600.png?text=Ao+thun+Oversize" alt="Áo thun Oversize">
+                <span class="badge-discount">-25%</span>
+  <span class="badge-tag badge-new">New</span>
+              <div class="add-to-cart">
+                <a href="#" class="glyphicon glyphicon-plus-sign" data-toggle="tooltip" data-placement="top" title="Thêm vào giỏ"></a>
+              </div>
+              <div class="caption">
+                <h4 class="pull-right">219.000đ</h4>
+                <h4><a href="ecommerce-details.html">Áo thun Oversize</a></h4>
+                <p class="desc">Form rộng thoải mái, phong cách streetwear.</p>
+                <div class="stock-mini">
+                  <small>Kho: còn 150/200 (75%)</small>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"><span class="sr-only">75% còn hàng</span></div>
+                  </div>
+                </div>
+                <div class="ratings">
+                  <p class="pull-right"><a href="#comments">32 đánh giá</a></p>
+                  <p>
+                  <input type="number" class="rating" value="5" data-display-only="true" data-size="xs" data-show-caption="false" data-show-clear="false">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <!-- ĐỔI ẢNH: sản phẩm khác 2 (750x600) -->
+              <img src="https://placehold.co/750x600.png?text=Ao+polo+Pique" alt="Áo polo Pique">
+                <span class="badge-discount">-25%</span>
+  <span class="badge-tag badge-new">New</span>
+              <div class="add-to-cart">
+                <a href="#" class="glyphicon glyphicon-plus-sign" data-toggle="tooltip" data-placement="top" title="Thêm vào giỏ"></a>
+              </div>
+              <div class="caption">
+                <h4 class="pull-right">259.000đ</h4>
+                <h4><a href="ecommerce-details.html">Áo polo Pique</a></h4>
+                <p class="desc">Vải cá sấu cao cấp, cổ bẻ lịch sự.</p>
+                <div class="stock-mini">
+                  <small>Kho: còn 30/150 (20%)</small>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"><span class="sr-only">20% còn hàng</span></div>
+                  </div>
+                </div>
+                <div class="ratings">
+                  <p class="pull-right"><a href="#comments">9 đánh giá</a></p>
+                  <p>
+                    <input type="number" class="rating" value="4" data-display-only="true" data-size="xs" data-show-caption="false" data-show-clear="false">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <!-- ĐỔI ẢNH: sản phẩm khác 3 (750x600) -->
+              <img src="https://placehold.co/750x600.png?text=Ao+thun+Graphic" alt="Áo thun Graphic">
+                <span class="badge-discount">-25%</span>
+  <span class="badge-tag badge-new">New</span>
+              <div class="add-to-cart">
+                <a href="#" class="glyphicon glyphicon-plus-sign" data-toggle="tooltip" data-placement="top" title="Thêm vào giỏ"></a>
+              </div>
+              <div class="caption">
+                <h4 class="pull-right">189.000đ</h4>
+                <h4><a href="ecommerce-details.html">Áo thun Graphic</a></h4>
+                <p class="desc">Họa tiết in sắc nét, bền màu sau nhiều lần giặt.</p>
+                <div class="stock-mini">
+                  <small>Kho: còn 90/150 (60%)</small>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% còn hàng</span></div>
+                  </div>
+                </div>
+                <div class="ratings">
+                  <p class="pull-right"><a href="#comments">21 đánh giá</a></p>
+                  <p>
+                  <input type="number" class="rating" value="5" data-display-only="true" data-size="xs" data-show-caption="false" data-show-clear="false">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /cột phải -->
+    </div><!-- /.row -->
+  </div><!-- /#content -->
+
+  <footer class="site-footer">
+    <div class="container">&copy; 2026 Diesel - Bài tập Phát triển ứng dụng Web (Bootstrap 3)</div>
+  </footer>
+
+  <!-- ================= MODAL SIGN IN ================= -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Đăng nhập</h4>
+        </div>
+        <form id="login-form">
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="login-email">Email</label>
+              <input type="email" class="form-control" id="login-email" placeholder="email@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="login-pass">Mật khẩu</label>
+              <input type="password" class="form-control" id="login-pass" placeholder="Mật khẩu" required>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+            <button type="submit" class="btn btn-success">Đăng nhập</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery -> Bootstrap JS -> xZoom -> main.js -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/xzoom/dist/xzoom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.9/js/star-rating.min.js"></script>
+  <script src="main.js"></script>
+
+  <script>
+    $(function () {
+
+      // ===== xZoom: ảnh chính + ảnh nhỏ =====
+      // Chọn ảnh nhỏ -> ảnh chính đổi theo; rê chuột lên ảnh chính -> cửa sổ zoom hiện bên phải
+      $('.xzoom, .xzoom-gallery').xzoom({
+        position: 'right',   // vị trí khung zoom
+        Xoffset: 15,         // cách ảnh chính 15px
+        zoomWidth: 400,      // rộng khung zoom
+        title: true,         // hiện chú thích (lấy từ thuộc tính title của ảnh nhỏ)
+        tint: '#333',        // phủ màu tối ngoài vùng kính lúp
+        tintOpacity: 0.5
+      });
+
+      // ===== Chọn size: tô sáng nút + hiện số lượng còn lại =====
+      $('#size-group .btn').on('click', function () {
+        var $btn  = $(this);
+        var size  = $btn.data('size');
+        var stock = parseInt($btn.data('stock'), 10);
+
+        $btn.addClass('active').siblings().removeClass('active');
+        $('#number').attr('max', stock);
+
+        if (stock > 0) {
+          $('#size-stock').text('Size ' + size + ': còn ' + stock + ' sản phẩm');
+        } else {
+          $('#size-stock').text('Size ' + size + ': đã hết hàng');
+        }
+      });
+
+      // ===== Thêm vào giỏ =====
+      $('#order-form').on('submit', function (e) {
+        e.preventDefault();
+
+        var $active = $('#size-group .active');
+        if ($active.length === 0) {
+          alert('Vui lòng chọn size trước khi thêm vào giỏ.');
+          return;
+        }
+
+        var qty   = parseInt($('#number').val(), 10) || 1;
+        var stock = parseInt($active.data('stock'), 10);
+        if (qty > stock) {
+          alert('Size ' + $active.data('size') + ' chỉ còn ' + stock + ' sản phẩm.');
+          return;
+        }
+
+        window.addToCart(qty);   // hàm này nằm trong main.js
+        alert('Đã thêm ' + qty + ' sản phẩm (size ' + $active.data('size') + ') vào giỏ hàng.');
+      });
+    });
+  </script>
+</body>
+</html>

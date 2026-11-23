@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trạng thái đơn hàng - Diesel</title>
+
+  <!-- Bootstrap 3 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/xzoom/dist/xzoom.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.9/css/star-rating.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= NAVBAR (giống trang chủ) ================= -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="ecommerce.html">
+          <!-- ĐỔI ẢNH: logo shop (cao 30px) -->
+          <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Diesel_logo.svg/3840px-Diesel_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail" alt="Diesel" height="30">
+        </a>
+        <form class="visible-xs-inline-block mobile-search search-form" style="margin-top:10px">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Tìm kiếm">
+          </div>
+        </form>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="ecommerce.html">Trang chủ <span class="sr-only">(current)</span></a></li>
+          <li><a href="#">Khuyến mãi</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+               aria-haspopup="true" aria-expanded="false">Danh mục <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Áo thun nam</a></li>
+              <li><a href="#">Áo thun nữ</a></li>
+              <li><a href="#">Áo polo</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Phụ kiện</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <form class="navbar-form navbar-left hidden-xs search-form">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Tìm kiếm">
+          </div>
+          <button type="submit" class="btn btn-default">Tìm</button>
+        </form>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="#">
+              <span class="badge pull-right" id="cart-count">4</span>
+              <i class="glyphicon glyphicon-shopping-cart"></i>
+            </a>
+          </li>
+          <li><a href="ecommerce-status.html"><i class="glyphicon glyphicon-user"></i></a></li>
+          <li><a href="#" data-toggle="modal" data-target="#myModal">Sign in</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container" id="content">
+    <div class="row">
+
+      <!-- Cột trái: Quản lý đơn hàng -->
+      <div class="col-sm-4 col-md-3">
+        <h3>Quản lý đơn hàng</h3>
+        <div class="list-group">
+          <a href="ecommerce-status.html" class="list-group-item active">Tất cả đơn hàng</a>
+          <a href="#" class="list-group-item">Quản lý phản hồi</a>
+          <a href="#" class="list-group-item">Mã giảm giá của tôi</a>
+          <a href="#" class="list-group-item">Địa chỉ giao hàng</a>
+        </div>
+      </div>
+
+      <!-- Cột phải: trạng thái đơn hàng (6 dòng) -->
+      <div class="col-sm-8 col-md-9">
+        <h3>Trạng thái đơn hàng</h3>
+
+        <!-- Đơn 1: Đang giao -> nút Track -->
+        <div class="thumbnail order-row">
+          <div class="row">
+            <div class="col-sm-1">
+              <!-- ĐỔI ẢNH: đơn hàng 1 -->
+              <img class="img-responsive" src="https://vn.diesel.com/dw/image/v2/BBLG_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dwf44aa332/images/large/A06268_0AFAA_9XXA_I.jpg?sw=1006&sh=1341&sm=fit" alt="Áo thun Basic" />
+            </div>
+            <div class="col-sm-4"><a href="ecommerce-detail.html">Áo thun Basic</a></div>
+            <div class="col-sm-1">1</div>
+            <div class="col-sm-2">149.000đ</div>
+            <div class="col-sm-2"><button class="btn btn-sm btn-default">Theo dõi</button></div>
+            <div class="col-sm-2"><a href="#">1 tin nhắn</a></div>
+          </div>
+        </div>
+
+        <!-- Đơn 2: Hoàn thành -->
+        <div class="thumbnail order-row">
+          <div class="row">
+            <div class="col-sm-1">
+              <!-- ĐỔI ẢNH: đơn hàng 2 -->
+              <img class="img-responsive" src="https://vn.diesel.com/dw/image/v2/BBLG_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dw75b8f401/images/large/A22762_0AECC_21GA_I.jpg?sw=1006&sh=1341&sm=fit" alt="Áo polo Pique" />
+            </div>
+            <div class="col-sm-4"><a href="ecommerce-detail.html">Áo polo Pique</a></div>
+            <div class="col-sm-1">1</div>
+            <div class="col-sm-2">259.000đ</div>
+            <div class="col-sm-2"><button class="btn btn-sm btn-success">Hoàn thành</button></div>
+            <div class="col-sm-2"><a href="#">1 tin nhắn</a></div>
+          </div>
+        </div>
+
+        <!-- Đơn 3: Đã hủy -->
+        <div class="thumbnail order-row">
+          <div class="row">
+            <div class="col-sm-1">
+              <!-- ĐỔI ẢNH: đơn hàng 3 -->
+              <img class="img-responsive"                   src="https://vn.diesel.com/dw/image/v2/BBLG_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dwb93c4812/images/large/A23430_0NJCF_77F_I.jpg?sw=1006&sh=1341&sm=fitc" alt="Áo thun Graphic" />
+            </div>
+            <div class="col-sm-4"><a href="ecommerce-detail.html">Áo thun Graphic</a></div>
+            <div class="col-sm-1">1</div>
+            <div class="col-sm-2">189.000đ</div>
+            <div class="col-sm-2"><button class="btn btn-sm btn-danger">Đã hủy</button></div>
+            <div class="col-sm-2"><a href="#">0 tin nhắn</a></div>
+          </div>
+        </div>
+
+        <!-- Đơn 4: Đang giao -->
+        <div class="thumbnail order-row">
+          <div class="row">
+            <div class="col-sm-1">
+              <!-- ĐỔI ẢNH: đơn hàng 4 -->
+              <img class="img-responsive"               src="https://diesel.com/dw/image/v2/BBLG_PRD/on/demandware.static/-/Library-Sites-DieselMFSharedLibrary/default/dw8fd420df/2025/regular-denim-wk47.jpg?sw=2560&sh=1440&sm=fit&q=80"
+alt="Áo thun Oversize" />
+            </div>
+            <div class="col-sm-4"><a href="ecommerce-detail.html">Áo thun Oversize</a></div>
+            <div class="col-sm-1">1</div>
+            <div class="col-sm-2">219.000đ</div>
+            <div class="col-sm-2"><button class="btn btn-sm btn-default">Theo dõi</button></div>
+            <div class="col-sm-2"><a href="#">1 tin nhắn</a></div>
+          </div>
+        </div>
+
+        <!-- Đơn 5: Hoàn thành -->
+        <div class="thumbnail order-row">
+          <div class="row">
+            <div class="col-sm-1">
+              <!-- ĐỔI ẢNH: đơn hàng 5 -->
+              <img class="img-responsive"                   src="https://vn.diesel.com/dw/image/v2/BBLG_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dwd74bec40/images/large/A21019_0EJAI_9XX_I.jpg?sw=1006&sh=1341&sm=fit"
+alt="Áo croptop nữ" />
+            </div>
+            <div class="col-sm-4"><a href="ecommerce-detail.html">Áo croptop nữ</a></div>
+            <div class="col-sm-1">2</div>
+            <div class="col-sm-2">338.000đ</div>
+            <div class="col-sm-2"><button class="btn btn-sm btn-success">Hoàn thành</button></div>
+            <div class="col-sm-2"><a href="#">1 tin nhắn</a></div>
+          </div>
+        </div>
+
+        <!-- Đơn 6: Đang giao -->
+        <div class="thumbnail order-row">
+          <div class="row">
+            <div class="col-sm-1">
+              <!-- ĐỔI ẢNH: đơn hàng 6 -->
+              <img class="img-responsive"                  src="https://vn.diesel.com/dw/image/v2/BBLG_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dw3030c228/images/large/A23234_0DLBW_96H_I.jpg?sw=1006&sh=1341&sm=fit"
+alt="Áo thun Unisex" />
+            </div>
+            <div class="col-sm-4"><a href="ecommerce-detail.html">Áo thun Unisex</a></div>
+            <div class="col-sm-1">1</div>
+            <div class="col-sm-2">199.000đ</div>
+            <div class="col-sm-2"><button class="btn btn-sm btn-default">Theo dõi</button></div>
+            <div class="col-sm-2"><a href="#">1 tin nhắn</a></div>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /.row -->
+  </div><!-- /#content -->
+
+  <footer class="site-footer">
+    <div class="container">&copy; 2026 Diesel - Bài tập Phát triển ứng dụng Web (Bootstrap 3)</div>
+  </footer>
+
+  <!-- ================= MODAL SIGN IN ================= -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Đăng nhập</h4>
+        </div>
+        <form id="login-form">
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="login-email">Email</label>
+              <input type="email" class="form-control" id="login-email" placeholder="email@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="login-pass">Mật khẩu</label>
+              <input type="password" class="form-control" id="login-pass" placeholder="Mật khẩu" required>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+            <button type="submit" class="btn btn-success">Đăng nhập</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.9/js/star-rating.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- 3 thẻ meta ở trên phải đứng đầu <head> -->
+    <title>Diesel - Thời trang áo thun</title>
+
+    <!-- Bootstrap 3 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css"
+    />
+    <!-- CSS của xZoom (dùng ở trang chi tiết, đưa vào đây để 3 trang đồng nhất) -->
+    <link rel="stylesheet" href="https://unpkg.com/xzoom/dist/xzoom.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.9/css/star-rating.min.css"
+    />
+    <!-- CSS riêng của bài (đặt sau cùng) -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="ecommerce.html">
+           
+            <img
+              src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Diesel_logo.svg/3840px-Diesel_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
+              alt="Diesel"
+              height="30"
+            />
+          </a>
+          <!-- Ô search chỉ hiện trên mobile -->
+          <form
+            class="visible-xs-inline-block mobile-search search-form"
+            style="margin-top: 10px"
+          >
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Tìm kiếm" />
+            </div>
+          </form>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <a href="ecommerce.html"
+                >Trang chủ <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li><a href="#">Khuyến mãi</a></li>
+            <li class="dropdown">
+              <a
+                href="#"
+                class="dropdown-toggle"
+                data-toggle="dropdown"
+                role="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Danh mục <span class="caret"></span
+              ></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Áo thun nam</a></li>
+                <li><a href="#">Áo thun nữ</a></li>
+                <li><a href="#">Áo polo</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Phụ kiện</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <!-- Ô search trên màn hình lớn (ẩn trên mobile) -->
+          <form class="navbar-form navbar-left hidden-xs search-form">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Tìm kiếm" />
+            </div>
+            <button type="submit" class="btn btn-default">Tìm</button>
+          </form>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="ecommerce-status.html">
+                <span class="badge pull-right" id="cart-count">4</span>
+                <i class="glyphicon glyphicon-shopping-cart"></i>
+              </a>
+            </li>
+            <li>
+              <a href="ecommerce-status.html"
+                ><i class="glyphicon glyphicon-user"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" data-toggle="modal" data-target="#myModal">Sign in</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container" id="content">
+      <!-- ================= SLIDER ================= -->
+      <div
+        id="carousel-example-generic"
+        class="carousel slide"
+        data-ride="carousel"
+      >
+        <ol class="carousel-indicators">
+          <li
+            data-target="#carousel-example-generic"
+            data-slide-to="0"
+            class="active"
+          ></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <img
+              src="https://diesel.com/dw/image/v2/BBLG_PRD/on/demandware.static/-/Library-Sites-DieselMFSharedLibrary/default/dwf409850b/2025/BlackFriday-publicLaunch.jpg?sw=2560&sh=1440&sm=fit&q=80"
+              alt="Banner 1"
+            />
+            <div class="carousel-caption">
+              <h3>Bộ sưu tập Hè 2026</h3>
+              <p>Áo thun cotton thoáng mát, giảm đến 30%</p>
+            </div>
+          </div>
+          <div class="item">
+            <img
+              src="https://diesel.com/dw/image/v2/BBLG_PRD/on/demandware.static/-/Library-Sites-DieselMFSharedLibrary/default/dw8fd420df/2025/regular-denim-wk47.jpg?sw=2560&sh=1440&sm=fit&q=80"
+              alt="Banner 2"
+            />
+            <div class="carousel-caption">
+              <h3>Local Brand Việt</h3>
+              <p>Form oversize, in hình độc quyền</p>
+            </div>
+          </div>
+          <div class="item">
+            <img
+              src="https://diesel.com/dw/image/v2/BBLG_PRD/on/demandware.static/-/Library-Sites-DieselMFSharedLibrary/default/dw7a4ef6d5/2026/GIFT-GALLERY-2026/Hero_module22_desktop.jpg?sw=2560&sh=1440&sm=fit&q=80"
+              alt="Banner 3"
+            />
+            <div class="carousel-caption">
+              <h3>Miễn phí vận chuyển</h3>
+              <p>Cho đơn hàng từ 300.000đ</p>
+            </div>
+          </div>
+        </div>
+
+        <a
+          class="left carousel-control"
+          href="#carousel-example-generic"
+          role="button"
+          data-slide="prev"
+        >
+          <span
+            class="glyphicon glyphicon-chevron-left"
+            aria-hidden="true"
+          ></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="right carousel-control"
+          href="#carousel-example-generic"
+          role="button"
+          data-slide="next"
+        >
+          <span
+            class="glyphicon glyphicon-chevron-right"
+            aria-hidden="true"
+          ></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+      <!-- ================= CATEGORIES + SẢN PHẨM ================= -->
+      <div class="row">
+        <!-- Cột trái: danh mục -->
+        <div class="col-sm-4 col-md-3">
+          <h3>Danh mục</h3>
+          <ul class="list-group">
+            <li class="list-group-item"><a href="#">Áo thun nam</a></li>
+            <li class="list-group-item"><a href="#">Áo thun nữ</a></li>
+            <li class="list-group-item"><a href="#">Áo polo</a></li>
+            <li class="list-group-item"><a href="#">Áo sơ mi</a></li>
+            <li class="list-group-item"><a href="#">Áo khoác</a></li>
+            <li class="list-group-item"><a href="#">Quần jean</a></li>
+            <li class="list-group-item"><a href="#">Quần short</a></li>
+            <li class="list-group-item"><a href="#">Váy &amp; Đầm</a></li>
+            <li class="list-group-item"><a href="#">Mũ &amp; Nón</a></li>
+            <li class="list-group-item"><a href="#">Phụ kiện</a></li>
+          </ul>
+        </div>
+
+        <!-- Cột phải: lưới sản phẩm (3 cột x 2 hàng) -->
+        <div class="col-sm-8 col-md-9">
+          <div class="row">
+            <!-- Sản phẩm 1: kho 88/200 = 44% (vàng) -->
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                <img
+                  src="https://vn.diesel.com/dw/image/v2/BBLG_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dwf44aa332/images/large/A06268_0AFAA_9XXA_I.jpg?sw=1006&sh=1341&sm=fit"
+                  alt="Áo thun Basic"
+                />
+                <span class="badge-discount">-25%</span>
+                <span class="badge-tag badge-new">New</span>
+
+                <div class="add-to-cart">
+                  <a
+                    href="#"
+                    class="glyphicon glyphicon-plus-sign"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    title="Thêm vào giỏ"
+                  ></a>
+                </div>
+                <div class="caption">
+                  <h4 class="pull-right">149.000đ<br><span class="old-price">199.000đ</span></h4>
+                  <h4><a href="ecommerce-details.html#product-basic">Áo thun Basic</a></h4>
+                  <p class="desc">
+                    Áo thun cotton 100% mềm mịn, thấm hút mồ hôi tốt.
+                  </p>
+                  <div class="stock-mini">
+                    <small>Kho: còn 88/200 (44%)</small>
+                    <div class="progress">
+                      <div
+                        class="progress-bar progress-bar-warning"
+                        role="progressbar"
+                        aria-valuenow="44"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        style="width: 44%"
+                      >
+                        <span class="sr-only">44% còn hàng</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ratings">
+                    <p class="pull-right">
+                      <a href="ecommerce-details.html#comments">15 đánh giá</a>
+                    </p>
+                    <p>
+                      <input
+                        type="number"
+                        class="rating"
+                        value="5"
+                        data-display-only="true"
+                        data-size="xs"
+                        data-show-caption="false"
+                        data-show-clear="false"
+                      />
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sản phẩm 2: kho 150/200 = 75% (xanh) -->
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                <img
+                  src="https://vn.diesel.com/dw/image/v2/BBLG_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dwaea56d44/images/large/A19963_0AIJU_9XX_I.jpg?sw=1006&sh=1341&sm=fit"
+                  alt="Áo thun Oversize"
+                />
+                <span class="badge-discount">-25%</span>
+<span class="badge-tag badge-new">New</span>
+                <div class="add-to-cart">
+                  <a
+                    href="#"
+                    class="glyphicon glyphicon-plus-sign"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    title="Thêm vào giỏ"
+                  ></a>
+                </div>
+                <div class="caption">
+                  <h4 class="pull-right">219.000đ</h4>
+                  <h4><a href="ecommerce-details.html">Áo thun Oversize</a></h4>
+                  <p class="desc">
+                    Form rộng thoải mái, phong cách streetwear năng động.
+                  </p>
+                  <div class="stock-mini">
+                    <small>Kho: còn 150/200 (75%)</small>
+                    <div class="progress">
+                      <div
+                        class="progress-bar progress-bar-success"
+                        role="progressbar"
+                        aria-valuenow="75"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        style="width: 75%"
+                      >
+                        <span class="sr-only">75% còn hàng</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ratings">
+                    <p class="pull-right">
+                      <a href="ecommerce-details.html#comments">32 đánh giá</a>
+                    </p>
+                    <p>
+                      <input
+                        type="number"
+                        class="rating"
+                        value="5"
+                        data-display-only="true"
+                        data-size="xs"
+                        data-show-caption="false"
+                        data-show-clear="false"
+                      />
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sản phẩm 3: kho 30/150 = 20% (đỏ) -->
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                
+                <img
+                  src="https://vn.diesel.com/dw/image/v2/BBLG_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dw75b8f401/images/large/A22762_0AECC_21GA_I.jpg?sw=1006&sh=1341&sm=fit"
+                  alt="Áo polo Pique"
+                />
+                <span class="badge-discount">-25%</span>
+<span class="badge-tag badge-new">New</span>
+                <div class="add-to-cart">
+                  <a
+                    href="#"
+                    class="glyphicon glyphicon-plus-sign"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    title="Thêm vào giỏ"
+                  ></a>
+                </div>
+                <div class="caption">
+                  <h4 class="pull-right">259.000đ</h4>
+                  <h4><a href="ecommerce-details.html">Áo polo Pique</a></h4>
+                  <p class="desc">
+                    Vải cá sấu cao cấp, cổ bẻ lịch sự, mặc đi làm đi chơi đều
+                    đẹp.
+                  </p>
+                  <div class="stock-mini">
+                    <small>Kho: còn 30/150 (20%)</small>
+                    <div class="progress">
+                      <div
+                        class="progress-bar progress-bar-danger"
+                        role="progressbar"
+                        aria-valuenow="20"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        style="width: 20%"
+                      >
+                        <span class="sr-only">20% còn hàng</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ratings">
+                    <p class="pull-right">
+                      <a href="ecommerce-details.html#comments">9 đánh giá</a>
+                    </p>
+                    <p>
+                      <input
+                        type="number"
+                        class="rating"
+                        value="4"
+                        data-display-only="true"
+                        data-size="xs"
+                        data-show-caption="false"
+                        data-show-clear="false"
+                      />
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sản phẩm 4: kho 90/150 = 60% (xanh) -->
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                <img
+                  src="https://vn.diesel.com/dw/image/v2/BBLG_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dwb93c4812/images/large/A23430_0NJCF_77F_I.jpg?sw=1006&sh=1341&sm=fit"
+                  alt="Áo thun Graphic"
+                />
+                  <span class="badge-discount">-25%</span>
+<span class="badge-tag badge-new">New</span>
+                <div class="add-to-cart">
+                  <a
+                    href="#"
+                    class="glyphicon glyphicon-plus-sign"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    title="Thêm vào giỏ"
+                  ></a>
+                </div>
+                <div class="caption">
+                  <h4 class="pull-right">189.000đ</h4>
+                  <h4><a href="ecommerce-details.html">Áo thun Graphic</a></h4>
+                  <p class="desc">
+                    Họa tiết in sắc nét, không bong tróc sau nhiều lần giặt.
+                  </p>
+                  <div class="stock-mini">
+                    <small>Kho: còn 90/150 (60%)</small>
+                    <div class="progress">
+                      <div
+                        class="progress-bar progress-bar-success"
+                        role="progressbar"
+                        aria-valuenow="60"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        style="width: 60%"
+                      >
+                        <span class="sr-only">60% còn hàng</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ratings">
+                    <p class="pull-right">
+                      <a href="ecommerce-details.html#comments">21 đánh giá</a>
+                    </p>
+                    <p>
+                      <input
+                        type="number"
+                        class="rating"
+                        value="5"
+                        data-display-only="true"
+                        data-size="xs"
+                        data-show-caption="false"
+                        data-show-clear="false"
+                      />
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sản phẩm 5: kho 60/150 = 40% (vàng) -->
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+      
+                <img
+                  src="https://vn.diesel.com/dw/image/v2/BBLG_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dwd74bec40/images/large/A21019_0EJAI_9XX_I.jpg?sw=1006&sh=1341&sm=fit"
+                  alt="Áo croptop nữ"
+                />
+                <span class="badge-discount">-25%</span>
+<span class="badge-tag badge-new">New</span>
+                <div class="add-to-cart">
+                  <a
+                    href="#"
+                    class="glyphicon glyphicon-plus-sign"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    title="Thêm vào giỏ"
+                  ></a>
+                </div>
+                <div class="caption">
+                  <h4 class="pull-right">169.000đ</h4>
+                  <h4><a href="ecommerce-details.html">Áo croptop nữ</a></h4>
+                  <p class="desc">
+                    Dáng ôm nhẹ, tôn dáng, dễ phối với quần cạp cao.
+                  </p>
+                  <div class="stock-mini">
+                    <small>Kho: còn 60/150 (40%)</small>
+                    <div class="progress">
+                      <div
+                        class="progress-bar progress-bar-warning"
+                        role="progressbar"
+                        aria-valuenow="40"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        style="width: 40%"
+                      >
+                        <span class="sr-only">40% còn hàng</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ratings">
+                    <p class="pull-right">
+                      <a href="ecommerce-details.html#comments">12 đánh giá</a>
+                    </p>
+                    <p>
+                      <input
+                        type="number"
+                        class="rating"
+                        value="3"
+                        data-display-only="true"
+                        data-size="xs"
+                        data-show-caption="false"
+                        data-show-clear="false"
+                      />
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sản phẩm 6: kho 12/120 = 10% (đỏ) -->
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+              
+                <img
+                  src="https://vn.diesel.com/dw/image/v2/BBLG_PRD/on/demandware.static/-/Sites-diesel-master-catalog/default/dw3030c228/images/large/A23234_0DLBW_96H_I.jpg?sw=1006&sh=1341&sm=fit"
+                  alt="Áo thun Form rộng"
+                />
+                <span class="badge-discount">-25%</span>
+<span class="badge-tag badge-new">New</span>
+                <div class="add-to-cart">
+                  <a
+                    href="#"
+                    class="glyphicon glyphicon-plus-sign"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    title="Thêm vào giỏ"
+                  ></a>
+                </div>
+                <div class="caption">
+                  <h4 class="pull-right">199.000đ</h4>
+                  <h4><a href="ecommerce-details.html">Áo thun Unisex</a></h4>
+                  <p class="desc">
+                    Unisex form rộng, chất vải dày dặn, đứng form.
+                  </p>
+                  <div class="stock-mini">
+                    <small>Kho: còn 12/120 (10%) - sắp hết</small>
+                    <div class="progress">
+                      <div
+                        class="progress-bar progress-bar-danger"
+                        role="progressbar"
+                        aria-valuenow="10"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        style="width: 10%"
+                      >
+                        <span class="sr-only">10% còn hàng</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ratings">
+                    <p class="pull-right">
+                      <a href="ecommerce-details.html#comments">4 đánh giá</a>
+                    </p>
+                    <p>
+                      <input
+                        type="number"
+                        class="rating"
+                        value="4"
+                        data-display-only="true"
+                        data-size="xs"
+                        data-show-caption="false"
+                        data-show-clear="false"
+                      />
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.row sản phẩm -->
+
+          <!-- Chú thích màu progress bar kho -->
+          <p class="stock-legend">
+            <strong>Chú thích kho:</strong>
+            <span class="label label-success">&ge; 60% còn nhiều</span>
+            <span class="label label-warning">30 - 59% sắp hết</span>
+            <span class="label label-danger">&lt; 30% rất ít</span>
+          </p>
+        </div>
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /#content -->
+
+    <footer class="site-footer">
+      <div class="container">
+        &copy; 2026 Diesel - Bài tập Phát triển ứng dụng Web (Bootstrap 3)
+      </div>
+    </footer>
+
+    <!-- ================= MODAL SIGN IN ================= -->
+    <div
+      class="modal fade"
+      id="myModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myModalLabel"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="myModalLabel">Đăng nhập</h4>
+          </div>
+          <form id="login-form">
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="login-email">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="login-email"
+                  placeholder="email@example.com"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="login-pass">Mật khẩu</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="login-pass"
+                  placeholder="Mật khẩu"
+                  required
+                />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-default"
+                data-dismiss="modal"
+              >
+                Đóng
+              </button>
+              <button type="submit" class="btn btn-success">Đăng nhập</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (bắt buộc cho Bootstrap JS và xZoom) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.9/js/star-rating.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

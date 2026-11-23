@@ -1,0 +1,1100 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>My Pixel Quest | Homework Hub</title>
+
+    <!-- Font phong cách Pixel -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* =========================
+           1. BIẾN MÀU
+        ========================= */
+      :root {
+        --pink: #f7b8cc;
+        --pink-light: #ffe4ed;
+        --mint: #bce9d6;
+        --mint-dark: #81c6aa;
+        --purple: #d6c5f5;
+        --cream: #fffaf0;
+        --yellow: #ffe7a0;
+        --text: #62566f;
+        --border: #8d7b98;
+        --white: #ffffff;
+        --shadow: #c9b9d2;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Nunito", sans-serif;
+        color: var(--text);
+        background-color: #fcf6ff;
+        background-image:
+          linear-gradient(rgba(213, 192, 230, 0.12) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(213, 192, 230, 0.12) 1px, transparent 1px);
+        background-size: 25px 25px;
+        overflow-x: hidden;
+      }
+
+      /* =========================
+           2. PIXEL DECORATION
+        ========================= */
+      .pixel-font {
+        font-family: "Press Start 2P", monospace;
+      }
+
+      .floating {
+        animation: float 3s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+
+        50% {
+          transform: translateY(-9px);
+        }
+      }
+
+      .sparkle {
+        position: fixed;
+        z-index: -1;
+        pointer-events: none;
+        font-size: 22px;
+        opacity: 0.6;
+        animation: twinkle 3s infinite alternate;
+      }
+
+      @keyframes twinkle {
+        from {
+          opacity: 0.25;
+          transform: scale(0.8);
+        }
+
+        to {
+          opacity: 0.9;
+          transform: scale(1.15);
+        }
+      }
+
+      /* =========================
+           3. HEADER
+        ========================= */
+      header {
+        background: var(--pink-light);
+        border-bottom: 4px solid var(--border);
+        padding: 17px 7%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .logo {
+        font-family: "Press Start 2P", monospace;
+        font-size: 13px;
+        color: #aa789a;
+        line-height: 1.8;
+      }
+
+      .header-badge {
+        background: white;
+        border: 2px solid var(--border);
+        padding: 10px 16px;
+        border-radius: 8px;
+        font-size: 12px;
+        font-weight: 900;
+        box-shadow: 4px 4px 0 var(--shadow);
+      }
+
+      /* =========================
+           4. MAIN CONTAINER
+        ========================= */
+      .container {
+        width: min(1050px, 92%);
+        margin: auto;
+      }
+
+      /* =========================
+           5. HERO
+        ========================= */
+      .hero {
+        text-align: center;
+        padding: 65px 15px 35px;
+        position: relative;
+      }
+
+      .hero-character {
+        font-size: 65px;
+        display: inline-block;
+        margin-bottom: 25px;
+      }
+
+      .hero-tag {
+        display: inline-block;
+        background: var(--yellow);
+        border: 2px solid var(--border);
+        padding: 9px 17px;
+        border-radius: 6px;
+        font-weight: 900;
+        font-size: 12px;
+        margin-bottom: 25px;
+        box-shadow: 4px 4px 0 #e6c987;
+      }
+
+      .hero h1 {
+        font-family: "Press Start 2P", monospace;
+        font-size: clamp(17px, 3.3vw, 31px);
+        line-height: 1.8;
+        color: #a67ba9;
+        text-shadow: 4px 4px 0 #fce1f0;
+        margin: 0 0 22px;
+      }
+
+      .hero p {
+        font-size: 16px;
+        line-height: 1.9;
+        max-width: 660px;
+        margin: auto;
+      }
+
+      /* =========================
+           6. PIXEL WINDOW
+        ========================= */
+      .pixel-window {
+        background: var(--white);
+        border: 3px solid var(--border);
+        border-radius: 10px;
+        box-shadow: 7px 7px 0 var(--shadow);
+        margin-bottom: 35px;
+        overflow: hidden;
+      }
+
+      .window-bar {
+        background: var(--purple);
+        border-bottom: 3px solid var(--border);
+        padding: 14px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .window-title {
+        font-family: "Press Start 2P", monospace;
+        font-size: 11px;
+        line-height: 1.7;
+      }
+
+      .window-dots {
+        display: flex;
+        gap: 6px;
+      }
+
+      .window-dots span {
+        width: 12px;
+        height: 12px;
+        border: 2px solid var(--border);
+        background: white;
+      }
+
+      .window-content {
+        padding: 28px;
+      }
+
+      /* =========================
+           7. STUDENT PROFILE
+        ========================= */
+      .profile-layout {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        align-items: center;
+        gap: 30px;
+      }
+
+      .avatar-box {
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--mint);
+        border: 3px solid var(--border);
+        border-radius: 12px;
+        font-size: 70px;
+        box-shadow: 5px 5px 0 #a5d5c1;
+      }
+
+      .profile-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px 25px;
+      }
+
+      .info-item {
+        background: #faf7ff;
+        padding: 12px 15px;
+        border: 2px dashed #d9c9e6;
+        border-radius: 8px;
+      }
+
+      .info-label {
+        display: block;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #a18daa;
+        font-weight: 900;
+        margin-bottom: 5px;
+      }
+
+      .info-value {
+        font-weight: 800;
+        font-size: 15px;
+        overflow-wrap: anywhere;
+      }
+
+      /* =========================
+           8. SECTION TITLE
+        ========================= */
+      .section-heading {
+        text-align: center;
+        margin: 55px 0 30px;
+      }
+
+      .section-heading h2 {
+        font-family: "Press Start 2P", monospace;
+        font-size: 16px;
+        line-height: 1.8;
+        color: #a67ba9;
+      }
+
+      .section-heading p {
+        font-size: 14px;
+        color: #8a7c95;
+      }
+
+      /* =========================
+           9. QUEST CARDS
+        ========================= */
+      
+/* =====================================
+   FIX GIAO DIỆN 3 QUEST
+===================================== */
+
+/* 3 nhiệm vụ nằm ngang */
+.quest-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    align-items: stretch;
+}
+
+/* Các thẻ nhiệm vụ cao bằng nhau */
+.quest-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    height: 100%;
+
+    background: #fff;
+    border: 3px solid var(--border);
+    border-radius: 10px;
+    box-shadow: 7px 7px 0 var(--shadow);
+    overflow: hidden;
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.quest-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 7px 13px 0 var(--shadow);
+}
+
+/* Phần hình phía trên */
+.quest-art {
+    height: 180px;
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    border-bottom: 3px solid var(--border);
+}
+
+/* Màu riêng cho từng nhiệm vụ */
+.quest-art.shop {
+    background: linear-gradient(
+        135deg, #ffe2ed, #f9c7d9
+    );
+}
+
+.quest-art.bird {
+    background: linear-gradient(
+        135deg, #d7f5e6, #b6e5e1
+    );
+}
+
+.quest-art.lms {
+    background: linear-gradient(
+        135deg, #e9dcff, #d5c3f5
+    );
+}
+
+/* Nội dung bên trong */
+.quest-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 22px;
+}
+
+/* Tiêu đề */
+.quest-body h3 {
+    font-size: 19px;
+    margin: 14px 0;
+    min-height: 50px;
+}
+
+/* Mô tả */
+.quest-body p {
+    font-size: 14px;
+    line-height: 1.8;
+    min-height: 0;
+    margin-bottom: 15px;
+}
+
+/* Nhóm công nghệ */
+.quest-body .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 7px;
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+/* Nút ở cuối mỗi card */
+.quest-body .pixel-btn {
+    margin-top: 0;
+    font-size: 9px;
+}
+
+/* Nút màu tím cho LMS */
+.pixel-btn.lavender {
+    background: #d6c5f5;
+    box-shadow: 4px 4px 0 #b8a3d6;
+}
+
+.pixel-btn.lavender:hover {
+    background: #e9ddff;
+    box-shadow: 2px 2px 0 #b8a3d6;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+/* Tablet: 2 cột */
+@media (max-width: 900px) {
+    .quest-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Điện thoại: 1 cột */
+@media (max-width: 600px) {
+    .quest-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quest-card {
+        height: auto;
+    }
+
+    .quest-body h3 {
+        min-height: 0;
+    }
+}
+
+      /* =========================
+           11. MISSION DESCRIPTION
+        ========================= */
+      .mission-list {
+        display: grid;
+        gap: 15px;
+      }
+
+      .mission-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 16px;
+        border: 2px dashed #d8c7e6;
+        background: #fcf9ff;
+        border-radius: 8px;
+      }
+
+      .mission-item .emoji {
+        font-size: 28px;
+        flex-shrink: 0;
+      }
+
+      .mission-item h4 {
+        margin: 0 0 6px;
+        font-size: 15px;
+        color: #826a94;
+      }
+
+      .mission-item p {
+        margin: 0;
+        font-size: 13px;
+        line-height: 1.8;
+      }
+
+      /* =========================
+           12. PROGRESS BAR
+        ========================= */
+      .progress-box {
+        background: #f7efff;
+        border: 2px solid var(--border);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+      }
+
+      .progress-top {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        margin-bottom: 13px;
+        font-weight: 900;
+      }
+
+      .progress-track {
+        width: 100%;
+        height: 22px;
+        background: white;
+        border: 2px solid var(--border);
+        padding: 3px;
+      }
+
+      .progress-fill {
+        height: 100%;
+        width: 0;
+        background: repeating-linear-gradient(
+          90deg,
+          #a3dfc2 0 18px,
+          #86cdaa 18px 22px
+        );
+        transition: width 1.2s ease;
+      }
+
+      /* =========================
+           13. FOOTER
+        ========================= */
+      footer {
+        text-align: center;
+        padding: 35px 20px;
+        margin-top: 65px;
+        border-top: 3px solid #e7d5ed;
+        background: #fff0f6;
+      }
+
+      footer p {
+        font-size: 13px;
+        line-height: 1.8;
+      }
+
+      .footer-heart {
+        color: #e9a0bd;
+        font-size: 20px;
+      }
+
+      /* =========================
+           14. RESPONSIVE
+        ========================= */
+      @media (max-width: 750px) {
+        header {
+          padding: 15px 5%;
+        }
+
+        .logo {
+          font-size: 10px;
+        }
+
+        .header-badge {
+          font-size: 10px;
+        }
+
+        .hero {
+          padding-top: 45px;
+        }
+
+        .hero-character {
+          font-size: 50px;
+        }
+
+        .profile-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .avatar-box {
+          width: 145px;
+          margin: auto;
+        }
+
+        .quest-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .profile-info {
+          grid-template-columns: 1fr;
+        }
+
+        .window-content {
+          padding: 20px;
+        }
+
+        .window-title {
+          font-size: 9px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+
+/* ==============================
+   QUEST 03 - LMS JQUERY
+============================== */
+
+/* Nền tím lavender */
+.quest-art.lms {
+    background: linear-gradient(
+        135deg,
+        #e9dcff,
+        #d5c3f5
+    );
+}
+
+/* Nút dẫn đến báo cáo */
+.pixel-btn.lavender {
+    background: #d6c5f5;
+    box-shadow: 4px 4px 0 #b8a3d6;
+}
+
+.pixel-btn.lavender:hover {
+    background: #e9ddff;
+    box-shadow: 2px 2px 0 #b8a3d6;
+}
+
+/* Căn 3 nhiệm vụ trên desktop */
+@media (min-width: 1000px) {
+    .quest-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .quest-body {
+        padding: 20px;
+    }
+
+    .quest-body h3 {
+        font-size: 19px;
+    }
+
+    .quest-body p {
+        min-height: 140px;
+    }
+
+    .pixel-btn {
+        font-size: 9px;
+    }
+}
+
+    </style>
+  </head>
+
+  <body>
+    <!-- =========================
+         TRANG ĐẦU
+    ========================= -->
+
+    <header>
+      <div class="logo">✿ PIXEL QUEST ✿</div>
+
+      <div class="header-badge">🎮 HOMEWORK MODE</div>
+    </header>
+
+    <main class="container">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-character floating">🐰</div>
+
+        <div>
+          <span class="hero-tag"> ✨ WELCOME, PLAYER! ✨ </span>
+        </div>
+
+        <h1>
+          MY PIXEL<br />
+          HOMEWORK QUEST
+        </h1>
+
+        <p>
+          Chào mừng đến với thế giới bài tập nhỏ xinh! Đây là nơi lưu trữ những
+          nhiệm vụ lập trình mà mình đã thực hiện trong buổi học. Hãy cùng khám
+          phá nhé! 🌸
+        </p>
+      </section>
+
+      <!-- =========================
+             THÔNG TIN SINH VIÊN
+        ========================= -->
+
+      <section class="pixel-window">
+        <div class="window-bar">
+          <span class="window-title"> PLAYER PROFILE </span>
+
+          <div class="window-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="window-content">
+          <div class="profile-layout">
+            <div class="avatar-box floating">🐱</div>
+
+            <div class="profile-info">
+              <div class="info-item">
+                <span class="info-label">Họ và tên</span>
+                <span class="info-value"> Hoàng Thị Mỹ Dung </span>
+              </div>
+
+              <div class="info-item">
+                <span class="info-label">MSSV</span>
+                <span class="info-value"> 31241026863 </span>
+              </div>
+
+              <div class="info-item">
+                <span class="info-label">Lớp</span>
+                <span class="info-value"> EE0001 </span>
+              </div>
+
+              <div class="info-item">
+                <span class="info-label">Môn học</span>
+                <span class="info-value">
+                  Phát triển ứng dụng thương mại điện tử
+                </span>
+              </div>
+
+              <div class="info-item">
+                <span class="info-label">Lớp học phần</span>
+                <span class="info-value"> 26C1INF50902701 </span>
+              </div>
+
+              <div class="info-item">
+                <span class="info-label">Chủ đề</span>
+                <span class="info-value">
+                  Bootstrap, jQuery & Game Development
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+             BÀI TẬP VỀ NHÀ
+        ========================= -->
+
+      <section class="pixel-window">
+        <div class="window-bar">
+          <span class="window-title"> MISSION BRIEFING </span>
+
+          <div class="window-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="window-content">
+          <h3>📜 Nhiệm vụ bài tập về nhà</h3>
+
+          <p>
+            Trong phần học này, mình thực hiện hai bài tập thực hành nhằm vận
+            dụng kiến thức HTML, CSS, Bootstrap, JavaScript và jQuery vào xây
+            dựng giao diện website và trò chơi.
+          </p>
+
+          <div class="mission-list">
+            <div class="mission-item">
+              <span class="emoji">🛍️</span>
+              <div>
+                <h4>Nhiệm vụ 01: Ecommerce</h4>
+                <p>
+                  Xây dựng website thương mại điện tử có trang sản phẩm, thông
+                  tin sản phẩm, chức năng phóng to hình ảnh bằng xZoom, hiển thị
+                  tồn kho với Bootstrap, đánh giá sao và tương tác giỏ hàng.
+                </p>
+              </div>
+            </div>
+
+            <div class="mission-item">
+              <span class="emoji">🐤</span>
+              <div>
+                <h4>Nhiệm vụ 02: Flappy Bird</h4>
+                <p>
+                  Xây dựng trò chơi Flappy Bird bằng HTML, CSS và jQuery. Triển
+                  khai tính điểm, phát hiện va chạm, hệ thống 4 Level, tăng tốc
+                  độ và chiến thắng khi đạt 50 điểm. Bổ sung MiniBird bằng phím
+                  M.
+                </p>
+              </div>
+            </div>
+            <div class="mission-item">
+              <span class="emoji">📚</span>
+              <div>
+                <h4>Nhiệm vụ 03: jQuery trên LMS</h4>
+                <p>
+                  Sử dụng jQuery trực tiếp trên website LMS của trường thông qua
+                  Developer Tools (Console). Truy xuất danh sách bài tập, xác
+                  định bài nộp thứ 5 và thống kê các chủ đề của môn học, bao gồm
+                  tên bài tập và ngày deadline. Kết quả được trình bày trong báo
+                  cáo Word.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- THANH TIẾN ĐỘ -->
+          <div class="progress-box">
+            <div class="progress-top">
+              <span>🎮 QUEST PROGRESS</span>
+              <span id="progress-text">0 / 2</span>
+            </div>
+
+            <div class="progress-track">
+              <div class="progress-fill" id="progress-fill"></div>
+            </div>
+
+            <p id="progress-note" style="font-size: 12px; margin-bottom: 0">
+              Nhấn vào các nhiệm vụ để bắt đầu khám phá!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+             DANH SÁCH BÀI TẬP
+        ========================= -->
+
+     
+<!-- =====================================
+     DANH SÁCH 3 NHIỆM VỤ
+===================================== -->
+
+<section id="quests">
+
+    <div class="section-heading">
+        <h2>✦ SELECT YOUR QUEST ✦</h2>
+        <p>Chọn một nhiệm vụ để khám phá bài tập nhé!</p>
+    </div>
+
+    <div class="quest-grid">
+
+        <!-- =========================
+             QUEST 01: ECOMMERCE
+        ========================= -->
+        <article class="quest-card">
+
+            <div class="quest-art shop">
+                <span class="quest-icon">🛍️</span>
+                <p>SHOPPING WORLD</p>
+            </div>
+
+            <div class="quest-body">
+
+                <span class="quest-number">
+                    QUEST 01
+                </span>
+
+                <h3>🛒 Ecommerce Website</h3>
+
+                <p>
+                    Website thương mại điện tử với
+                    giao diện responsive, thư viện
+                    Bootstrap, xZoom, thanh tồn kho,
+                    đánh giá sao và chức năng giỏ hàng.
+                </p>
+
+                <div class="tech-tags">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>Bootstrap 3</span>
+                    <span>jQuery</span>
+                    <span>xZoom</span>
+                </div>
+
+                <a href="ecommerce.html"
+                   class="pixel-btn quest-link"
+                   data-quest="ecommerce">
+                    ▶ ENTER SHOP
+                </a>
+
+            </div>
+
+        </article>
+        <!-- KẾT THÚC QUEST 01 -->
+
+
+        <!-- =========================
+             QUEST 02: FLAPPY BIRD
+        ========================= -->
+        <article class="quest-card">
+
+            <div class="quest-art bird">
+                <span class="quest-icon">🐥</span>
+                <p>FLAPPY ADVENTURE</p>
+            </div>
+
+            <div class="quest-body">
+
+                <span class="quest-number">
+                    QUEST 02
+                </span>
+
+                <h3>🐤 Flappy Bird Game</h3>
+
+                <p>
+                    Trò chơi Flappy Bird với hệ thống
+                    4 Level, điều khiển bằng bàn phím,
+                    tính điểm, phát hiện va chạm,
+                    chiến thắng ở 50 điểm và MiniBird
+                    đặc biệt bằng phím M.
+                </p>
+
+                <div class="tech-tags">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>jQuery</span>
+                    <span>Game Logic</span>
+                </div>
+
+                <a href="flappybird/index.html"
+                   class="pixel-btn mint quest-link"
+                   data-quest="flappy">
+                    ▶ PLAY FLAPPY BIRD
+                </a>
+
+            </div>
+
+        </article>
+        <!-- KẾT THÚC QUEST 02 -->
+
+
+        <!-- =========================
+             QUEST 03: LMS JQUERY
+        ========================= -->
+        <article class="quest-card">
+
+            <div class="quest-art lms">
+                <span class="quest-icon">📚</span>
+                <p>LMS CODE QUEST</p>
+            </div>
+
+            <div class="quest-body">
+
+                <span class="quest-number">
+                    QUEST 03
+                </span>
+
+                <h3>💻 LMS jQuery Challenge</h3>
+
+                <p>
+                    Thực hành jQuery trực tiếp trên
+                    website LMS của trường. Sử dụng
+                    Console để tìm bài nộp thứ 5,
+                    liệt kê chủ đề, kiểm tra bài tập
+                    và lấy ngày deadline.
+                    Kết quả trình bày trong Word.
+                </p>
+
+                <div class="tech-tags">
+                    <span>jQuery</span>
+                    <span>DOM</span>
+                    <span>Console</span>
+                    <span>each()</span>
+                    <span>find()</span>
+                </div>
+
+                <a href="jquery-lms.docx"
+                   class="pixel-btn lavender quest-link"
+                   data-quest="lms"
+                   target="_blank"
+                   rel="noopener">
+                    ▶ VIEW LMS REPORT
+                </a>
+
+            </div>
+
+        </article>
+        <!-- KẾT THÚC QUEST 03 -->
+
+    </div>
+    <!-- KẾT THÚC QUEST GRID -->
+
+</section>
+<!-- KẾT THÚC DANH SÁCH NHIỆM VỤ -->
+
+    </main>
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+      <div class="footer-heart">♥ ♥ ♥</div>
+
+      <p>Made with love, pixels & a little bit of magic ✨</p>
+
+      <p>© 2026 My Pixel Homework Quest</p>
+    </footer>
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+    
+// ===============================
+// QUẢN LÝ 3 NHIỆM VỤ
+// ===============================
+
+var visitedQuests = {
+    ecommerce: false,
+    flappy: false,
+    lms: false
+};
+
+var questLinks = document.querySelectorAll('.quest-link');
+
+var progressFill = document.getElementById('progress-fill');
+var progressText = document.getElementById('progress-text');
+var progressNote = document.getElementById('progress-note');
+
+// Cập nhật thanh tiến độ
+function updateProgress() {
+
+    var count = Object.values(visitedQuests)
+        .filter(function(value) {
+            return value === true;
+        }).length;
+
+    var total = 3;
+    var percent = (count / total) * 100;
+
+    progressFill.style.width = percent + '%';
+    progressText.textContent = count + ' / ' + total;
+
+    if (count === total) {
+        progressNote.textContent =
+            '🏆 Đã khám phá cả 3 nhiệm vụ!';
+    } else {
+        progressNote.textContent =
+            '✨ Đã khám phá ' + count +
+            ' trên ' + total + ' nhiệm vụ!';
+    }
+}
+
+// Khi người dùng click vào nhiệm vụ
+questLinks.forEach(function(link) {
+
+    link.addEventListener('click', function() {
+
+        var quest = this.getAttribute('data-quest');
+
+        if (Object.prototype.hasOwnProperty.call(
+            visitedQuests, quest
+        )) {
+            visitedQuests[quest] = true;
+        }
+
+        sessionStorage.setItem(
+            'pixelVisitedQuests',
+            JSON.stringify(visitedQuests)
+        );
+
+        updateProgress();
+    });
+});
+
+// Khôi phục tiến độ
+var saved = sessionStorage.getItem('pixelVisitedQuests');
+
+if (saved) {
+    try {
+        var parsed = JSON.parse(saved);
+
+        Object.keys(visitedQuests).forEach(function(key) {
+            visitedQuests[key] = parsed[key] === true;
+        });
+
+    } catch (error) {
+        console.log('Không đọc được tiến độ cũ.');
+    }
+}
+
+updateProgress();
+
+// ===============================
+// HIỆU ỨNG PIXEL TRANG TRÍ
+// ===============================
+
+var decorations = ['✦', '✧', '♡', '✿', '⋆'];
+
+for (var i = 0; i < 16; i++) {
+
+    var star = document.createElement('span');
+
+    star.className = 'sparkle';
+
+    star.textContent = decorations[
+        Math.floor(Math.random() * decorations.length)
+    ];
+
+    star.style.left = Math.random() * 100 + '%';
+    star.style.top = Math.random() * 100 + '%';
+    star.style.animationDelay = Math.random() * 3 + 's';
+
+    document.body.appendChild(star);
+}
+
+    </script>
+  </body>
+</html>
