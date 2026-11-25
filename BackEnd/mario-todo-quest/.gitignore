@@ -1,0 +1,14 @@
+**/bin/
+**/obj/
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+.vs/
+.vscode/
+*.db
+*.db-shm
+*.db-wal
+appsettings.Local.json
+.env
+*.user
+*.suo

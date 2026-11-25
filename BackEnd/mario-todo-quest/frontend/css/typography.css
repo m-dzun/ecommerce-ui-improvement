@@ -1,0 +1,19 @@
+:root {
+  --display: "Baloo 2", "Nunito", sans-serif;
+  --pixel: var(--display);
+}
+
+.brand-name,
+.world-tag,
+.coin-pill small,
+.mini-progress > span,
+.eyebrow,
+.hero h1,
+.button,
+.panel-heading h2,
+.empty-state h3,
+.dialog-head h2,
+.confirm-dialog h2,
+.mobile-brand {
+  font-weight: 800;
+}

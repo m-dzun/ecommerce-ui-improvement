@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#5c94fc"><title>MARIO TODO QUEST</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <div class="sky-decor" aria-hidden="true"><span class="cloud cloud-a"></span><span class="cloud cloud-b"></span><span class="hill hill-a"></span><span class="hill hill-b"></span></div>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#today" aria-label="MARIO TODO QUEST trang chủ"><span class="brand-mark">M</span><span class="brand-name">MARIO<br>TODO QUEST</span></a>
+      <div class="world-tag">WORLD 1-1 <span>★</span></div>
+      <nav class="nav-menu" aria-label="Điều hướng">
+        <a href="#today" class="nav-link active" data-route="today"><span>☀️</span> Hôm nay</a>
+        <a href="#all" class="nav-link" data-route="all"><span>🧱</span> Tất cả nhiệm vụ</a>
+        <a href="#stats" class="nav-link" data-route="stats"><span>📊</span> Thống kê</a>
+      </nav>
+      <div class="sidebar-tip"><span class="tip-block">?</span><p>Mỗi nhiệm vụ hoàn thành giúp bạn nhận <b>10 coins</b>!</p></div>
+      <div class="sidebar-footer"><span class="pixel-mushroom">●</span> Cố lên, người hùng!</div>
+    </aside>
+    <main class="main-content">
+      <header class="topbar"><div class="mobile-brand"><span class="brand-mark">M</span><span>MARIO TODO QUEST</span></div><div class="top-date"><span class="date-icon">📅</span><span id="current-date">Hôm nay</span></div><div class="top-stats"><div class="coin-pill"><span class="coin">●</span><b id="coin-count">0</b><small>COINS</small></div><div class="mini-progress"><span>TIẾN ĐỘ</span><b id="header-progress">0%</b><div class="mini-track"><i id="header-progress-bar"></i></div></div></div></header>
+      <section id="view" aria-live="polite"></section>
+    </main>
+  </div>
+  <div id="toast-region" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+  <dialog id="task-dialog" class="task-dialog"><form id="task-form" novalidate><div class="dialog-head"><div><span class="eyebrow">QUEST EDITOR</span><h2 id="dialog-title">Nhiệm vụ mới</h2></div><button type="button" class="icon-button" id="close-dialog" aria-label="Đóng">×</button></div><input type="hidden" id="task-id"><label for="task-title">Tên nhiệm vụ <em>*</em></label><input id="task-title" maxlength="150" required placeholder="Ví dụ: Hoàn thành bài tập C#"><span class="field-error" id="title-error"></span><label for="task-description">Mô tả</label><textarea id="task-description" rows="3" maxlength="2000" placeholder="Thêm ghi chú cho nhiệm vụ..."></textarea><div class="field-grid"><div><label for="task-date">Ngày đến hạn <em>*</em></label><input id="task-date" type="date" required><span class="field-error" id="date-error"></span></div><div><label for="task-time">Giờ đến hạn</label><input id="task-time" type="time"></div></div><div class="field-grid"><div><label for="task-priority">Độ ưu tiên</label><select id="task-priority"><option value="Low">Thấp</option><option value="Medium" selected>Trung bình</option><option value="High">Cao</option></select></div><div><label for="task-status">Trạng thái</label><select id="task-status"><option value="Todo">Chưa làm</option><option value="InProgress">Đang thực hiện</option><option value="Done">Đã hoàn thành</option></select></div></div><div class="dialog-actions"><button type="button" class="button button-quiet" id="cancel-dialog">Hủy</button><button class="button button-primary" type="submit">LƯU NHIỆM VỤ <span>➜</span></button></div></form></dialog>
+  <dialog id="confirm-dialog" class="confirm-dialog"><div class="confirm-icon">!</div><h2>Xóa nhiệm vụ?</h2><p>Nhiệm vụ này sẽ bị xóa khỏi hành trình của bạn.</p><div class="dialog-actions"><button class="button button-quiet" id="confirm-cancel">Giữ lại</button><button class="button button-danger" id="confirm-delete">Xóa nhiệm vụ</button></div></dialog>
+</body></html>
