@@ -1,0 +1,216 @@
+﻿
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>@ViewData["Title"] - MVC Movie</title>
+
+    <script type="importmap"></script>
+
+    <link rel="stylesheet"
+          href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <link rel="stylesheet"
+          href="~/css/site.css"
+          asp-append-version="true" />
+
+    <link rel="stylesheet"
+          href="~/_31241026863_HoangThiMyDung.styles.css"
+          asp-append-version="true" />
+
+    <style>
+        :root {
+            --movie-dark: #121826;
+            --movie-red: #dc3545;
+            --movie-gold: #f4bf58;
+            --movie-bg: #f7f8fc;
+        }
+
+        body {
+            background-color: var(--movie-bg);
+            color: #252b38;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        .movie-navbar {
+            background: var(--movie-dark);
+            box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+            padding: 14px 0;
+        }
+
+        .movie-brand {
+            color: white !important;
+            font-size: 1.25rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .movie-brand span {
+            color: var(--movie-gold);
+        }
+
+        .movie-navbar .nav-link {
+            color: #e0e4ed !important;
+            margin: 0 6px;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .movie-navbar .nav-link:hover {
+            color: var(--movie-gold) !important;
+        }
+
+        .movie-navbar .navbar-toggler {
+            border-color: rgba(255,255,255,0.4);
+        }
+
+        .movie-navbar .navbar-toggler-icon {
+            filter: invert(1);
+        }
+
+        .movie-content {
+            flex: 1;
+            padding-top: 30px;
+            padding-bottom: 50px;
+        }
+
+        .movie-content h1,
+        .movie-content h2 {
+            font-weight: 750;
+            color: var(--movie-dark);
+        }
+
+        .btn-primary {
+            background-color: var(--movie-red);
+            border-color: var(--movie-red);
+        }
+
+        .btn-primary:hover {
+            background-color: #b92332;
+            border-color: #b92332;
+        }
+
+        .movie-footer {
+            background-color: var(--movie-dark);
+            color: #dce0e8;
+            padding: 22px 0;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .movie-footer strong {
+            color: var(--movie-gold);
+        }
+
+        .movie-footer a {
+            color: #dce0e8;
+            text-decoration: none;
+        }
+
+        .movie-footer a:hover {
+            color: var(--movie-gold);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm movie-navbar"
+             data-bs-theme="dark">
+            <div class="container">
+
+                <a class="navbar-brand movie-brand"
+                   asp-area=""
+                   asp-controller="Movies"
+                   asp-action="Index">
+                    🎬 MVC <span>MOVIE</span>
+                </a>
+
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#movieNavbar"
+                        aria-controls="movieNavbar"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse"
+                     id="movieNavbar">
+
+                    <ul class="navbar-nav me-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               asp-area=""
+                               asp-controller="Movies"
+                               asp-action="Index">
+                                Trang chủ
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               asp-area=""
+                               asp-controller="Movies"
+                               asp-action="Index">
+                                Phim
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               asp-area=""
+                               asp-controller="Genres"
+                               asp-action="Index">
+                                Thể loại
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               asp-area=""
+                               asp-controller="Movies"
+                               asp-action="AddToCart">
+                                Giỏ hàng
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <partial name="_LoginPartial" />
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container movie-content">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="movie-footer">
+        <div class="container">
+            &copy; @DateTime.Now.Year –
+            <strong>31241026863 – Hoàng Thị Mỹ Dung</strong>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/js/site.js"
+            asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

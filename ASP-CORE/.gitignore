@@ -1,0 +1,35 @@
+
+# ASP.NET Core build
+**/bin/
+**/obj/
+**/.vs/
+**/TestResults/
+
+# Publish
+**/publish/
+**/publish-*/
+**/*.zip
+
+# Sensitive configurations
+**/appsettings.json
+**/appsettings.Development.json
+**/appsettings.Production.json
+**/secrets.json
+**/*.pubxml.user
+
+# IDE / temporary files
+**/*.user
+**/*.suo
+**/*.cache
+**/*.tmp
+
+# Logs
+**/logs/
+**/*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Keep example configuration
+!**/appsettings.example.json
